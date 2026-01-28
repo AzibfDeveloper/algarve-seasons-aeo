@@ -37,9 +37,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
-            <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tight cursor-pointer">
-              <Sun className="w-8 h-8 text-primary" />
-              <span>Algarve<span className="text-primary">Seasons</span></span>
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
             </div>
           </Link>
 
@@ -94,8 +93,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-display font-bold text-xl">
-              <Sun className="w-6 h-6 text-primary" />
-              <span>Algarve<span className="text-primary">Seasons</span></span>
+              <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-12 w-auto object-contain bg-white/10 rounded-md p-1" />
             </div>
             <p className="text-sm text-gray-400">
               The Algarve's All-In-One HVAC Solution Provider. Premium Daikin, Tesla, and Huawei partners.
