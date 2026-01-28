@@ -37,21 +37,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2 font-display font-bold text-2xl tracking-tight">
+            <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tight cursor-pointer">
               <Sun className="w-8 h-8 text-primary" />
               <span>Algarve<span className="text-primary">Seasons</span></span>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a className={`text-sm font-medium transition-colors hover:text-primary ${
+                <div className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 }`}>
                   {link.label}
-                </a>
+                </div>
               </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md">
@@ -70,9 +70,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <nav className="flex flex-col gap-6 mt-10">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
-                    <a className="text-lg font-medium hover:text-primary">
+                    <div className="text-lg font-medium hover:text-primary cursor-pointer">
                       {link.label}
-                    </a>
+                    </div>
                   </Link>
                 ))}
                 <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
@@ -105,10 +105,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="font-bold mb-4 text-white">Services</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/services/air-conditioning"><a className="hover:text-primary">Air Conditioning</a></Link></li>
-              <li><Link href="/services/solar-energy"><a className="hover:text-primary">Solar Energy</a></Link></li>
-              <li><Link href="/services/heat-pumps"><a className="hover:text-primary">Heat Pumps</a></Link></li>
-              <li><Link href="/services/maintenance"><a className="hover:text-primary">Maintenance</a></Link></li>
+              <li><Link href="/services/air-conditioning"><div className="hover:text-primary cursor-pointer">Air Conditioning</div></Link></li>
+              <li><Link href="/services/solar-energy"><div className="hover:text-primary cursor-pointer">Solar Energy</div></Link></li>
+              <li><Link href="/services/heat-pumps"><div className="hover:text-primary cursor-pointer">Heat Pumps</div></Link></li>
+              <li><Link href="/services/maintenance"><div className="hover:text-primary cursor-pointer">Maintenance</div></Link></li>
             </ul>
           </div>
 

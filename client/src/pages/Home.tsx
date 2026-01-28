@@ -100,7 +100,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Service 1: Air Conditioning */}
             <Link href="/services/air-conditioning">
-              <a className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2">
+              <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 cursor-pointer">
                 <img 
                   src="/images/service-ac-interior.jpg" 
                   alt="Air Conditioning Installation Algarve" 
@@ -117,12 +117,12 @@ export default function Home() {
                   </p>
                   <span className="text-primary font-bold flex items-center gap-2">Learn More <span className="text-xl">→</span></span>
                 </div>
-              </a>
+              </div>
             </Link>
 
             {/* Service 2: Solar Energy */}
             <Link href="/services/solar-energy">
-              <a className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 md:-mt-12">
+              <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 md:-mt-12 cursor-pointer">
                 <img 
                   src="/images/service-solar-roof.jpg" 
                   alt="Solar Panels Algarve" 
@@ -139,12 +139,12 @@ export default function Home() {
                   </p>
                   <span className="text-primary font-bold flex items-center gap-2">Learn More <span className="text-xl">→</span></span>
                 </div>
-              </a>
+              </div>
             </Link>
 
             {/* Service 3: Heat Pumps */}
             <Link href="/services/heat-pumps">
-              <a className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2">
+              <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 cursor-pointer">
                 <img 
                   src="/images/service-heatpump-garden.jpg" 
                   alt="Heat Pump Installation Algarve" 
@@ -161,7 +161,7 @@ export default function Home() {
                   </p>
                   <span className="text-primary font-bold flex items-center gap-2">Learn More <span className="text-xl">→</span></span>
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
         </div>
