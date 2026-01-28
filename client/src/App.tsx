@@ -5,12 +5,20 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import AirConditioning from "./pages/services/AirConditioning";
+import SolarEnergy from "./pages/services/SolarEnergy";
+import HeatPumps from "./pages/services/HeatPumps";
+import TeslaPowerwall from "./pages/services/TeslaPowerwall";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/services/air-conditioning"} component={AirConditioning} />
+      <Route path={"/services/solar-energy"} component={SolarEnergy} />
+      <Route path={"/services/heat-pumps"} component={HeatPumps} />
+      <Route path={"/services/tesla-powerwall"} component={TeslaPowerwall} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
