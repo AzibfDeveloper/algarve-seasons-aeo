@@ -108,8 +108,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center mb-4">
-                    <Wind className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
+                    <Wind className="w-6 h-6 text-[#7ACCC8]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Air Conditioning</h3>
                   <p className="text-gray-200 mb-4 line-clamp-2">
@@ -130,8 +130,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center mb-4">
-                    <Sun className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
+                    <Sun className="w-6 h-6 text-[#FF9900]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Solar Energy</h3>
                   <p className="text-gray-200 mb-4 line-clamp-2">
@@ -152,8 +152,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
+                    <Zap className="w-6 h-6 text-[#C02626]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Heat Pumps</h3>
                   <p className="text-gray-200 mb-4 line-clamp-2">

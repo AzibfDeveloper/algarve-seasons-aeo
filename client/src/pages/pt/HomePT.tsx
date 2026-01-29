@@ -98,8 +98,8 @@ export default function HomePT() {
                   <img src="/images/service-ac-interior.jpg" alt="Ar Condicionado" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
-                    <Wind className="w-6 h-6 text-secondary group-hover:text-white" />
+                  <div className="w-12 h-12 bg-[#7ACCC8]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#7ACCC8] group-hover:text-white transition-colors">
+                    <Wind className="w-6 h-6 text-[#7ACCC8] group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-secondary transition-colors">Ar Condicionado</h3>
                   <p className="text-slate-600 mb-6">
@@ -120,8 +120,8 @@ export default function HomePT() {
                   <img src="/images/service-solar-roof.jpg" alt="Energia Solar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Sun className="w-6 h-6 text-primary group-hover:text-white" />
+                  <div className="w-12 h-12 bg-[#FF9900]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF9900] group-hover:text-white transition-colors">
+                    <Sun className="w-6 h-6 text-[#FF9900] group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">Energia Solar</h3>
                   <p className="text-slate-600 mb-6">
@@ -142,8 +142,8 @@ export default function HomePT() {
                   <img src="/images/service-heatpump-garden.jpg" alt="Bombas de Calor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Flame className="w-6 h-6 text-accent group-hover:text-white" />
+                  <div className="w-12 h-12 bg-[#C02626]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#C02626] group-hover:text-white transition-colors">
+                    <Flame className="w-6 h-6 text-[#C02626] group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">Bombas de Calor</h3>
                   <p className="text-slate-600 mb-6">
