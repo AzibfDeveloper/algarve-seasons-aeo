@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Sun } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function LayoutPT({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/services/air-conditioning", label: "Air Conditioning" },
-    { href: "/services/solar-energy", label: "Solar Energy" },
-    { href: "/services/heat-pumps", label: "Heat Pumps" },
-    { href: "/about", label: "About Us" },
-    { href: "/contact", label: "Contact" },
+    { href: "/pt-pt", label: "Início" },
+    { href: "/pt-pt/servicos/ar-condicionado", label: "Ar Condicionado" },
+    { href: "/pt-pt/servicos/energia-solar", label: "Energia Solar" },
+    { href: "/pt-pt/servicos/bombas-calor", label: "Bombas de Calor" },
+    { href: "/pt-pt/sobre", label: "Sobre Nós" },
+    { href: "/pt-pt/contacto", label: "Contacto" },
   ];
 
   return (
@@ -24,11 +24,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <span className="flex items-center gap-2">
               <Phone className="w-4 h-4" /> +351 910 675 168
             </span>
-            <span>Serving the entire Algarve region</span>
+            <span>Servindo toda a região do Algarve</span>
           </div>
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary transition-colors">Facebook</a>
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+            <Link href="/"><span className="cursor-pointer font-bold ml-4">🇬🇧 EN</span></Link>
           </div>
         </div>
       </div>
@@ -36,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Main Navigation */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
-          <Link href="/">
+          <Link href="/pt-pt">
             <div className="flex items-center gap-2 cursor-pointer">
               <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
             </div>
@@ -54,7 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md">
-              Get Free Quote
+              Pedir Orçamento
             </Button>
           </nav>
 
@@ -74,8 +75,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </div>
                   </Link>
                 ))}
+                <Link href="/"><div className="text-lg font-bold hover:text-primary cursor-pointer">🇬🇧 English Version</div></Link>
                 <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
-                  Get Free Quote
+                  Pedir Orçamento
                 </Button>
               </nav>
             </SheetContent>
@@ -96,22 +98,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-sm text-slate-500">
-              The Algarve's All-In-One HVAC Solution Provider. Premium Daikin, Tesla, and Huawei partners.
+              O fornecedor de soluções AVAC "Tudo-em-Um" do Algarve. Parceiros Premium Daikin, Tesla e Huawei.
             </p>
           </div>
           
           <div>
-            <h3 className="font-bold mb-4 text-slate-900">Services</h3>
+            <h3 className="font-bold mb-4 text-slate-900">Serviços</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li><Link href="/services/air-conditioning"><div className="hover:text-primary cursor-pointer">Air Conditioning</div></Link></li>
-              <li><Link href="/services/solar-energy"><div className="hover:text-primary cursor-pointer">Solar Energy</div></Link></li>
-              <li><Link href="/services/heat-pumps"><div className="hover:text-primary cursor-pointer">Heat Pumps</div></Link></li>
-              <li><Link href="/services/maintenance"><div className="hover:text-primary cursor-pointer">Maintenance</div></Link></li>
+              <li><Link href="/pt-pt/servicos/ar-condicionado"><div className="hover:text-primary cursor-pointer">Ar Condicionado</div></Link></li>
+              <li><Link href="/pt-pt/servicos/energia-solar"><div className="hover:text-primary cursor-pointer">Energia Solar</div></Link></li>
+              <li><Link href="/pt-pt/servicos/bombas-calor"><div className="hover:text-primary cursor-pointer">Bombas de Calor</div></Link></li>
+              <li><Link href="/pt-pt/servicos/manutencao"><div className="hover:text-primary cursor-pointer">Manutenção</div></Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 text-slate-900">Service Areas</h3>
+            <h3 className="font-bold mb-4 text-slate-900">Áreas de Serviço</h3>
             <ul className="space-y-2 text-sm text-slate-500">
               <li>Faro</li>
               <li>Lagos</li>
@@ -123,16 +125,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 text-slate-900">Contact</h3>
+            <h3 className="font-bold mb-4 text-slate-900">Contacto</h3>
             <ul className="space-y-2 text-sm text-slate-500">
               <li>+351 910 675 168</li>
               <li>Dan@algarveseasons.com</li>
-              <li>Mon-Sat: 9am - 6pm</li>
+              <li>Seg-Sáb: 9h - 18h</li>
             </ul>
           </div>
         </div>
         <div className="container mt-12 pt-8 border-t border-slate-200 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} Algarve Seasons. All rights reserved.
+          © {new Date().getFullYear()} Algarve Seasons. Todos os direitos reservados.
         </div>
       </footer>
     </div>
