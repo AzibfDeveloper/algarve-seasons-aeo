@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Sun, Battery, Coins, Zap, BarChart3, MapPin } from "lucide-react";
+import SolarCalculator from "@/components/calculators/SolarCalculator";
 
 export default function SolarEnergy() {
   return (
@@ -66,37 +67,46 @@ export default function SolarEnergy() {
         </div>
       </section>
 
-      {/* Why Solar in Algarve */}
+      {/* Why Solar & Calculator */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Solar is a Smart Investment in the Algarve</h2>
-            <p className="text-lg text-muted-foreground">
-              With over 300 days of sunshine per year, the Algarve is one of the best places in Europe for solar energy production.
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2">
+              <div className="max-w-2xl mb-12">
+                <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Solar is a Smart Investment in the Algarve</h2>
+                <p className="text-lg text-muted-foreground">
+                  With over 300 days of sunshine per year, the Algarve is one of the best places in Europe for solar energy production.
+                </p>
+              </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <Coins className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Reduce Energy Bills</h3>
-              <p className="text-muted-foreground">
-                Cut your electricity costs by up to 70% by generating your own power for AC, pool heating, and appliances.
-              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <Coins className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Reduce Energy Bills</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Cut your electricity costs by up to 70% by generating your own power for AC, pool heating, and appliances.
+                  </p>
+                </div>
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <Battery className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Energy Independence</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Add a battery to store excess daytime energy for use at night, protecting you from rising grid prices.
+                  </p>
+                </div>
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <BarChart3 className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Government Incentives</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Benefit from reduced VAT (6%) and potential Fundo Ambiental support (up to €7,500) for renewable upgrades.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <Battery className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Energy Independence</h3>
-              <p className="text-muted-foreground">
-                Add a battery to store excess daytime energy for use at night, protecting you from rising grid prices.
-              </p>
-            </div>
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <BarChart3 className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Government Incentives</h3>
-              <p className="text-muted-foreground">
-                Benefit from reduced VAT (6%) and potential Fundo Ambiental support (up to €7,500) for renewable upgrades.
-              </p>
+
+            {/* Calculator Widget */}
+            <div className="lg:col-span-1 sticky top-24">
+              <SolarCalculator />
             </div>
           </div>
         </div>

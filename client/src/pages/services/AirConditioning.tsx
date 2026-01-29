@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Thermometer, Wind, Zap, Settings, Shield, MapPin } from "lucide-react";
+import BtuEstimator from "@/components/calculators/BtuEstimator";
 
 export default function AirConditioning() {
   return (
@@ -66,37 +67,46 @@ export default function AirConditioning() {
         </div>
       </section>
 
-      {/* Why AC Essential */}
+      {/* Why AC Essential & Calculator */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Air Conditioning is Essential in the Algarve</h2>
-            <p className="text-lg text-muted-foreground">
-              With summer peaks reaching 40°C and mild but damp winters, modern AC is your year-round climate solution.
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2">
+              <div className="max-w-2xl mb-12">
+                <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Air Conditioning is Essential in the Algarve</h2>
+                <p className="text-lg text-muted-foreground">
+                  With summer peaks reaching 40°C and mild but damp winters, modern AC is your year-round climate solution.
+                </p>
+              </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <Thermometer className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Year-Round Comfort</h3>
-              <p className="text-muted-foreground">
-                Stay cool during the intense Algarve summer heat and efficiently warm your home during winter evenings.
-              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <Thermometer className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Year-Round Comfort</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Stay cool during the intense Algarve summer heat and efficiently warm your home during winter evenings.
+                  </p>
+                </div>
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <Zap className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">High Efficiency</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Modern inverter units are A+++ rated, costing significantly less to run than traditional electric heaters.
+                  </p>
+                </div>
+                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                  <Shield className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Healthier Air</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Advanced filtration systems remove dust, allergens, and humidity, preventing mold in coastal properties.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <Zap className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-3">High Efficiency</h3>
-              <p className="text-muted-foreground">
-                Modern inverter units are A+++ rated, costing significantly less to run than traditional electric heaters.
-              </p>
-            </div>
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
-              <Shield className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Healthier Air</h3>
-              <p className="text-muted-foreground">
-                Advanced filtration systems remove dust, allergens, and humidity, preventing mold in coastal properties.
-              </p>
+
+            {/* Calculator Widget */}
+            <div className="lg:col-span-1 sticky top-24">
+              <BtuEstimator />
             </div>
           </div>
         </div>
