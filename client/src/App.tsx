@@ -9,6 +9,8 @@ import AirConditioning from "./pages/services/AirConditioning";
 import SolarEnergy from "./pages/services/SolarEnergy";
 import HeatPumps from "./pages/services/HeatPumps";
 import TeslaPowerwall from "./pages/services/TeslaPowerwall";
+import Maintenance from "./pages/services/Maintenance";
+import Contact from "./pages/Contact";
 import AirConditioningPT from "./pages/pt/services/AirConditioningPT";
 import SolarEnergyPT from "./pages/pt/services/SolarEnergyPT";
 import HeatPumpsPT from "./pages/pt/services/HeatPumpsPT";
@@ -24,6 +26,8 @@ function Router() {
       <Route path={"/services/solar-energy"} component={SolarEnergy} />
       <Route path={"/services/heat-pumps"} component={HeatPumps} />
       <Route path={"/services/tesla-powerwall"} component={TeslaPowerwall} />
+      <Route path={"/services/maintenance"} component={Maintenance} />
+      <Route path={"/contact"} component={Contact} />
       
       {/* Portuguese Routes */}
       <Route path="/pt-pt" component={HomePT} />

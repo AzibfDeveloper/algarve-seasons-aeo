@@ -100,9 +100,11 @@ export default function BtuEstimator() {
             <p className="text-xs text-slate-500 text-center flex items-center justify-center gap-1">
               <Info className="w-3 h-3" /> Estimate only. Site survey required.
             </p>
-            <Button variant="outline" className="w-full mt-4 border-secondary text-secondary hover:bg-secondary/10 h-8 text-sm">
-              Get Quote for {result.kw}kW Unit
-            </Button>
+            <a href={`/contact?service=AC&size=${result.kw}kW`}>
+              <Button variant="outline" className="w-full mt-4 border-secondary text-secondary hover:bg-secondary/10 h-8 text-sm">
+                Get Quote for {result.kw}kW Unit
+              </Button>
+            </a>
           </div>
         )}
       </CardContent>
