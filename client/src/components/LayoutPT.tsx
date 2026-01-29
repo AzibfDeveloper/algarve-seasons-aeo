@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Phone } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useLocation } from "wouter";
 
 export default function LayoutPT({ children }: { children: React.ReactNode }) {
@@ -29,7 +30,9 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary transition-colors">Facebook</a>
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-            <Link href="/"><span className="cursor-pointer font-bold ml-4">🇬🇧 EN</span></Link>
+            <div className="border-l border-slate-300 pl-4 ml-2">
+              <LanguageSwitcher currentLang="pt" />
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +82,9 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
                     </div>
                   </Link>
                 ))}
-                <Link href="/"><div className="text-lg font-bold hover:text-primary cursor-pointer">🇬🇧 English Version</div></Link>
+                <div className="pt-4 border-t border-slate-100">
+                  <LanguageSwitcher currentLang="pt" />
+                </div>
                 <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
                   Pedir Orçamento
                 </Button>

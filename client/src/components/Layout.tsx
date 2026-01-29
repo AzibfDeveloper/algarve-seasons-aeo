@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Phone, Sun } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useLocation } from "wouter";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -29,6 +30,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary transition-colors">Facebook</a>
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+            <div className="border-l border-slate-300 pl-4 ml-2">
+              <LanguageSwitcher currentLang="en" />
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +82,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </div>
                   </Link>
                 ))}
+                <div className="pt-4 border-t border-slate-100">
+                  <LanguageSwitcher currentLang="en" />
+                </div>
                 <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
                   Get Free Quote
                 </Button>
