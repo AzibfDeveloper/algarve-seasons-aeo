@@ -3,10 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, MapPin, Shield, Star, Sun, Wind, Zap } from "lucide-react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <title>Algarve Seasons | #1 HVAC, Solar & Heat Pump Specialists in Algarve</title>
+        <meta name="description" content="Algarve Seasons is the premium Daikin D1+ Partner for air conditioning, solar panels, and heat pumps in Faro, Lagos, and Albufeira. Get a free quote today." />
+        <meta name="keywords" content="HVAC Algarve, Air Conditioning Faro, Solar Panels Portugal, Heat Pumps Algarve, Daikin Installer" />
+        <link rel="canonical" href="https://algarveseasons.com/" />
+      </Helmet>
       {/* Hero Section - Asymmetric Split */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-background">
         {/* Background Pattern */}
@@ -58,6 +65,9 @@ export default function Home() {
             <img 
               src="/images/hero-villa-solar.jpg" 
               alt="Luxury Algarve Villa with Solar Panels" 
+              fetchPriority="high"
+              width="600"
+              height="600"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
             />
             
@@ -104,6 +114,9 @@ export default function Home() {
                 <img 
                   src="/images/service-ac-interior.jpg" 
                   alt="Air Conditioning Installation Algarve" 
+                  loading="lazy"
+                  width="400"
+                  height="500"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -126,6 +139,9 @@ export default function Home() {
                 <img 
                   src="/images/service-solar-roof.jpg" 
                   alt="Solar Panels Algarve" 
+                  loading="lazy"
+                  width="400"
+                  height="500"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -148,6 +164,9 @@ export default function Home() {
                 <img 
                   src="/images/service-heatpump-garden.jpg" 
                   alt="Heat Pump Installation Algarve" 
+                  loading="lazy"
+                  width="400"
+                  height="500"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>

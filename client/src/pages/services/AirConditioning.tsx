@@ -3,10 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Thermometer, Wind, Zap, Settings, Shield, MapPin } from "lucide-react";
 import BtuEstimator from "@/components/calculators/BtuEstimator";
+import { Helmet } from "react-helmet-async";
 
 export default function AirConditioning() {
   return (
     <Layout>
+      <Helmet>
+        <title>Air Conditioning Algarve | Daikin Installation & Repair | Algarve Seasons</title>
+        <meta name="description" content="Expert air conditioning installation and repair in the Algarve. Daikin D1+ Partners offering wall-mounted, multi-split, and VRV systems for villas and apartments." />
+        <meta name="keywords" content="Air Conditioning Algarve, AC Installation Faro, Daikin Repair Portugal, AC Maintenance Albufeira" />
+        <link rel="canonical" href="https://algarveseasons.com/services/air-conditioning" />
+      </Helmet>
       {/* Hero Section - Ice Blue Theme */}
       <section className="relative min-h-[70vh] flex items-center bg-blue-50/50">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">

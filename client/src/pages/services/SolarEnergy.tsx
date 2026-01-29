@@ -3,10 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Sun, Battery, Coins, Zap, BarChart3, MapPin } from "lucide-react";
 import SolarCalculator from "@/components/calculators/SolarCalculator";
+import { Helmet } from "react-helmet-async";
 
 export default function SolarEnergy() {
   return (
     <Layout>
+      <Helmet>
+        <title>Solar Energy Algarve | Solar Panels & Tesla Powerwall | Algarve Seasons</title>
+        <meta name="description" content="Generate your own electricity with high-efficiency solar panels and battery storage in the Algarve. Tesla Powerwall Certified Installers offering ROI analysis." />
+        <meta name="keywords" content="Solar Panels Algarve, Photovoltaic Systems Faro, Tesla Powerwall Portugal, Solar Battery Storage" />
+        <link rel="canonical" href="https://algarveseasons.com/services/solar-energy" />
+      </Helmet>
       {/* Hero Section - Sun Orange Theme */}
       <section className="relative min-h-[70vh] flex items-center bg-orange-50/50">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
