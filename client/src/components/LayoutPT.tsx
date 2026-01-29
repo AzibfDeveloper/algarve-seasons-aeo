@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Phone } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
@@ -67,6 +67,10 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <div className="sr-only">
+                <SheetTitle>Menu de Navegação</SheetTitle>
+                <SheetDescription>Aceda às secções e serviços do site</SheetDescription>
+              </div>
               <nav className="flex flex-col gap-6 mt-10">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href}>
