@@ -30,7 +30,7 @@ export default function SolarEnergy() {
             </h1>
             
             <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary pl-4">
-              "Turn Algarve sunshine into free electricity. We design and install high-performance **photovoltaic systems** with **Tesla Powerwall** and **Huawei** battery storage for maximum energy independence and savings."
+              "Turn Algarve sunshine into free electricity. We design and install high-performance photovoltaic systems with Tesla Powerwall and Huawei battery storage for maximum energy independence and savings."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -126,15 +126,15 @@ export default function SolarEnergy() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**High-Efficiency Panels:** Tier-1 monocrystalline panels optimized for high heat performance.</span>
+                  <span><span className="font-bold">High-Efficiency Panels:</span> Tier-1 monocrystalline panels optimized for high heat performance.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**Smart Inverters:** Huawei and Fronius inverters with app monitoring.</span>
+                  <span><span className="font-bold">Smart Inverters:</span> Huawei and Fronius inverters with app monitoring.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**Custom Design:** Roof-mounted, ground-mounted, or pergola integration options.</span>
+                  <span><span className="font-bold">Custom Design:</span> Roof-mounted, ground-mounted, or pergola integration options.</span>
                 </li>
               </ul>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">Request Solar Quote</Button>
@@ -148,15 +148,15 @@ export default function SolarEnergy() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**Tesla Powerwall:** 13.5kWh capacity, integrated backup, and sleek design.</span>
+                  <span><span className="font-bold">Tesla Powerwall:</span> 13.5kWh capacity, integrated backup, and sleek design.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**Huawei Luna:** Modular battery system scalable from 5kWh to 30kWh.</span>
+                  <span><span className="font-bold">Huawei Luna:</span> Modular battery system scalable from 5kWh to 30kWh.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span>**Backup Power:** Keep essential lights and appliances running during grid outages.</span>
+                  <span><span className="font-bold">Backup Power:</span> Keep essential lights and appliances running during grid outages.</span>
                 </li>
               </ul>
               <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/5">Learn About Batteries</Button>

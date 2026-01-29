@@ -30,7 +30,7 @@ export default function AirConditioning() {
             </h1>
             
             <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-secondary pl-4">
-              "Algarve Seasons installs and repairs **Daikin premium air conditioning systems** for villas, apartments, and businesses across the Algarve. Our services include wall-mounted units, multi-room systems, and emergency same-day repairs designed for the Algarve's hot summers and mild winters."
+              "Algarve Seasons installs and repairs Daikin premium air conditioning systems for villas, apartments, and businesses across the Algarve. Our services include wall-mounted units, multi-room systems, and emergency same-day repairs designed for the Algarve's hot summers and mild winters."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -126,15 +126,15 @@ export default function AirConditioning() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**Wall-mounted units:** Daikin Perfera, Emura, and Stylish ranges.</span>
+                  <span><span className="font-bold">Wall-mounted units:</span> Daikin Perfera, Emura, and Stylish ranges.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**Multi-room systems:** One outdoor unit connecting up to 5 indoor units.</span>
+                  <span><span className="font-bold">Multi-room systems:</span> One outdoor unit connecting up to 5 indoor units.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**VRV systems:** High-capacity solutions for large villas and commercial spaces.</span>
+                  <span><span className="font-bold">VRV systems:</span> High-capacity solutions for large villas and commercial spaces.</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">Request Installation Quote</Button>
@@ -148,15 +148,15 @@ export default function AirConditioning() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**Emergency Repair:** Same-day response for breakdowns across the Algarve.</span>
+                  <span><span className="font-bold">Emergency Repair:</span> Same-day response for breakdowns across the Algarve.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**Annual Servicing:** Deep cleaning, gas checks, and performance testing.</span>
+                  <span><span className="font-bold">Annual Servicing:</span> Deep cleaning, gas checks, and performance testing.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                  <span>**Rental Packages:** Maintenance plans specifically for holiday rental properties.</span>
+                  <span><span className="font-bold">Rental Packages:</span> Maintenance plans specifically for holiday rental properties.</span>
                 </li>
               </ul>
               <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/5">Schedule Maintenance</Button>

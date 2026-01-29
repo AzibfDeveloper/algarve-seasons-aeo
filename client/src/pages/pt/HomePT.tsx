@@ -27,7 +27,7 @@ export default function HomePT() {
             </h1>
             
             <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-              A Algarve Seasons fornece **instalação premium de ar condicionado**, **sistemas de energia solar** e **bombas de calor** para casas, moradias e empresas em Faro, Albufeira, Lagos e toda a região do Algarve.
+              A Algarve Seasons fornece instalação premium de ar condicionado, sistemas de energia solar e bombas de calor para casas, moradias e empresas em Faro, Albufeira, Lagos e toda a região do Algarve.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

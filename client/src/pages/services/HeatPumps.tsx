@@ -29,7 +29,7 @@ export default function HeatPumps() {
             </h1>
             
             <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-accent pl-4">
-              "Replace your gas boiler with an eco-friendly **air-to-water heat pump**. Enjoy year-round comfort with a single system that provides efficient underfloor heating, domestic hot water, and summer cooling."
+              "Replace your gas boiler with an eco-friendly air-to-water heat pump. Enjoy year-round comfort with a single system that provides efficient underfloor heating, domestic hot water, and summer cooling."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -119,15 +119,15 @@ export default function HeatPumps() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Daikin Altherma 3:** High-temperature output (up to 65°C), ideal for replacing boilers.</span>
+                  <span><span className="font-bold">Daikin Altherma 3:</span> High-temperature output (up to 65°C), ideal for replacing boilers.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Integrated Tank:** Compact indoor units with built-in stainless steel hot water tanks.</span>
+                  <span><span className="font-bold">Integrated Tank:</span> Compact indoor units with built-in stainless steel hot water tanks.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Smart Control:** Manage heating and hot water schedules via smartphone app.</span>
+                  <span><span className="font-bold">Smart Control:</span> Manage heating and hot water schedules via smartphone app.</span>
                 </li>
               </ul>
               <Button className="w-full bg-accent hover:bg-accent/90 text-white">Request Heat Pump Quote</Button>
@@ -144,15 +144,15 @@ export default function HeatPumps() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Titanium Heat Exchangers:** Corrosion-resistant design for saltwater and chlorine pools.</span>
+                  <span><span className="font-bold">Titanium Heat Exchangers:</span> Corrosion-resistant design for saltwater and chlorine pools.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Quiet Operation:** Low noise levels suitable for residential neighborhoods.</span>
+                  <span><span className="font-bold">Quiet Operation:</span> Low noise levels suitable for residential neighborhoods.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span>**Inverter Technology:** Adjusts power output to maintain temperature efficiently.</span>
+                  <span><span className="font-bold">Inverter Technology:</span> Adjusts power output to maintain temperature efficiently.</span>
                 </li>
               </ul>
               <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent/5">View Pool Solutions</Button>

@@ -31,7 +31,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Algarve Seasons provides premium **air conditioning installation**, **solar energy systems**, and **heat pumps** for homes, villas, and businesses across Faro, Albufeira, Lagos, and the entire Algarve region.
+              Algarve Seasons provides premium air conditioning installation, solar energy systems, and heat pumps for homes, villas, and businesses across Faro, Albufeira, Lagos, and the entire Algarve region.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -195,7 +195,7 @@ export default function Home() {
             {/* Direct Answer Sentence for AEO */}
             <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg">
               <p className="text-blue-900 font-medium">
-                "Algarve Seasons is a **Daikin D1+ Premium Partner** providing air conditioning installation, solar panel systems, and heat pumps for residential and commercial properties across all 16 Algarve municipalities since 2016."
+                "Algarve Seasons is a Daikin D1+ Premium Partner providing air conditioning installation, solar panel systems, and heat pumps for residential and commercial properties across all 16 Algarve municipalities since 2016."
               </p>
             </div>
 
