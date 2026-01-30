@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, MapPin, Shield, Star, Sun, Wind, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -185,6 +186,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Reviews />
 
       {/* Trust & Local Presence - AEO Optimized Text */}
       <section className="py-24 bg-white">

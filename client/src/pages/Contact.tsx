@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
+import Reviews from "@/components/Reviews";
 import { Phone, Mail, MapPin, CheckCircle2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useEffect, useState } from "react";
@@ -242,6 +243,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <Reviews />
     </Layout>
   );
 }
