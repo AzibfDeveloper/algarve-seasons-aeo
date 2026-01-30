@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function AlcoutimLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function AlcoutimLanding() {
         />
         <meta name="keywords" content="air conditioning Alcoutim, solar energy Alcoutim, heat pumps Alcoutim, HVAC Alcoutim" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Alcoutim"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Alcoutim. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Alcoutim and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Alcoutim"

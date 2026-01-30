@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function SaoBrasLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function SaoBrasLanding() {
         />
         <meta name="keywords" content="air conditioning São Brás, solar energy São Brás, heat pumps São Brás, HVAC São Brás" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="São Brás de Alportel"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in São Brás de Alportel. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving São Brás de Alportel and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="São Brás de Alportel"

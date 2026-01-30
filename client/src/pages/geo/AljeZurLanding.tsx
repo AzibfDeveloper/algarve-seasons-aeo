@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function AljeZurLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function AljeZurLanding() {
         />
         <meta name="keywords" content="air conditioning Aljezur, solar energy Aljezur, heat pumps Aljezur, HVAC Aljezur" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Aljezur"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Aljezur. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Aljezur and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Aljezur"

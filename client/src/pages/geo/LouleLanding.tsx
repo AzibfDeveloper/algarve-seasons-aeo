@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function LouleLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function LouleLanding() {
         />
         <meta name="keywords" content="air conditioning Loulé, solar energy Loulé, heat pumps Loulé, HVAC Loulé" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Loulé"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Loulé. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Loulé and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Loulé"

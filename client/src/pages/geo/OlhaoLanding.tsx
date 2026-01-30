@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function OlhaoLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function OlhaoLanding() {
         />
         <meta name="keywords" content="air conditioning Olhão, solar energy Olhão, heat pumps Olhão, HVAC Olhão" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Olhão"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Olhão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Olhão and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Olhão"

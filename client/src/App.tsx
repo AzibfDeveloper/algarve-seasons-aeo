@@ -40,6 +40,7 @@ const AljeZurLanding = lazy(() => import("@/pages/geo/AljeZurLanding"));
 const VilaDoBispoLanding = lazy(() => import("@/pages/geo/VilaDoBispoLanding"));
 const CastroMarimLanding = lazy(() => import("@/pages/geo/CastroMarimLanding"));
 const AlcoutimLanding = lazy(() => import("@/pages/geo/AlcoutimLanding"));
+const SilvestLanding = lazy(() => import("@/pages/geo/SilvestLanding"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -73,7 +74,7 @@ function Router() {
         <Route path="/albufeira" component={AlbufeiraLanding} />
         <Route path="/lagos" component={LagosLanding} />
         <Route path="/portimao" component={PortimaoLanding} />
-        <Route path="/silves" component={SilvesPT} />
+
         <Route path="/loule" component={LouleLanding} />
         <Route path="/tavira" component={TaviraPT} />
         <Route path="/olhao" component={OlhaoLanding} />
@@ -85,6 +86,7 @@ function Router() {
         <Route path="/vila-do-bispo" component={VilaDoBispoLanding} />
         <Route path="/castro-marim" component={CastroMarimLanding} />
         <Route path="/alcoutim" component={AlcoutimLanding} />
+        <Route path="/silves" component={SilvestLanding} />
         
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}

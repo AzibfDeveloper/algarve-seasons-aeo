@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function PortimaoLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function PortimaoLanding() {
         />
         <meta name="keywords" content="air conditioning Portimão, solar energy Portimão, heat pumps Portimão, HVAC Portimão" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Portimão"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Portimão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Portimão and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Portimão"

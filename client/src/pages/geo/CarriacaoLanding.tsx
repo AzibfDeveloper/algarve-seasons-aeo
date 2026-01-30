@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function CarriacaoLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function CarriacaoLanding() {
         />
         <meta name="keywords" content="air conditioning Carriacão, solar energy Carriacão, heat pumps Carriacão, HVAC Carriacão" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Carriacão"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Carriacão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Carriacão and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Carriacão"

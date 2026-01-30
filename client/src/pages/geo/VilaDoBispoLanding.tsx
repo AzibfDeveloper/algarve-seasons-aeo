@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import GeoLandingTemplate from "@/components/GeoLandingTemplate";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function VilaDoBispoLanding() {
   const serviceAreas = [
@@ -22,6 +23,11 @@ export default function VilaDoBispoLanding() {
         />
         <meta name="keywords" content="air conditioning Vila do Bispo, solar energy Vila do Bispo, heat pumps Vila do Bispo, HVAC Vila do Bispo" />
       </Helmet>
+      <LocalBusinessSchema
+        municipality="Vila do Bispo"
+        description="Algarve Seasons is the leading HVAC and renewable energy provider in Vila do Bispo. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Vila do Bispo and surrounding areas since 2016."
+        serviceAreas={serviceAreas}
+      />
       <Layout>
         <GeoLandingTemplate
           municipality="Vila do Bispo"
