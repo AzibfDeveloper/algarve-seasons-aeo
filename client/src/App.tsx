@@ -23,6 +23,24 @@ const SolarEnergyPT = lazy(() => import("@/pages/pt/services/SolarEnergyPT"));
 const HeatPumpsPT = lazy(() => import("@/pages/pt/services/HeatPumpsPT"));
 const TeslaPowerwallPT = lazy(() => import("@/pages/pt/services/TeslaPowerwallPT"));
 
+// Geo-targeted Landing Pages
+const FaroLanding = lazy(() => import("@/pages/geo/FaroLanding"));
+const AlbufeiraLanding = lazy(() => import("@/pages/geo/AlbufeiraLanding"));
+const LagosLanding = lazy(() => import("@/pages/geo/LagosLanding"));
+const PortimaoLanding = lazy(() => import("@/pages/geo/PortimaoLanding"));
+const SilvesPT = lazy(() => import("@/pages/geo/SilvesPT"));
+const LouleLanding = lazy(() => import("@/pages/geo/LouleLanding"));
+const TaviraPT = lazy(() => import("@/pages/geo/TaviraPT"));
+const OlhaoLanding = lazy(() => import("@/pages/geo/OlhaoLanding"));
+const SaoBrasLanding = lazy(() => import("@/pages/geo/SaoBrasLanding"));
+const LagoadeLanding = lazy(() => import("@/pages/geo/LagoadeLanding"));
+const CarriacaoLanding = lazy(() => import("@/pages/geo/CarriacaoLanding"));
+const MonchiqueLanding = lazy(() => import("@/pages/geo/MonchiqueLanding"));
+const AljeZurLanding = lazy(() => import("@/pages/geo/AljeZurLanding"));
+const VilaDoBispoLanding = lazy(() => import("@/pages/geo/VilaDoBispoLanding"));
+const CastroMarimLanding = lazy(() => import("@/pages/geo/CastroMarimLanding"));
+const AlcoutimLanding = lazy(() => import("@/pages/geo/AlcoutimLanding"));
+
 // Loading fallback component
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-50">
@@ -49,6 +67,25 @@ function Router() {
         <Route path="/pt-pt/energia-solar" component={SolarEnergyPT} />
         <Route path="/pt-pt/bombas-de-calor" component={HeatPumpsPT} />
         <Route path="/pt-pt/tesla-powerwall" component={TeslaPowerwallPT} />
+        
+        {/* Geo-targeted Landing Pages */}
+        <Route path="/faro" component={FaroLanding} />
+        <Route path="/albufeira" component={AlbufeiraLanding} />
+        <Route path="/lagos" component={LagosLanding} />
+        <Route path="/portimao" component={PortimaoLanding} />
+        <Route path="/silves" component={SilvesPT} />
+        <Route path="/loule" component={LouleLanding} />
+        <Route path="/tavira" component={TaviraPT} />
+        <Route path="/olhao" component={OlhaoLanding} />
+        <Route path="/sao-bras" component={SaoBrasLanding} />
+        <Route path="/lagoa" component={LagoadeLanding} />
+        <Route path="/carriacao" component={CarriacaoLanding} />
+        <Route path="/monchique" component={MonchiqueLanding} />
+        <Route path="/aljezur" component={AljeZurLanding} />
+        <Route path="/vila-do-bispo" component={VilaDoBispoLanding} />
+        <Route path="/castro-marim" component={CastroMarimLanding} />
+        <Route path="/alcoutim" component={AlcoutimLanding} />
+        
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
