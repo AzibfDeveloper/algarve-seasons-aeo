@@ -5,6 +5,7 @@ import { Check, MapPin, Shield, Star, Sun, Wind, Zap } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import Reviews from "@/components/Reviews";
+import SeasonalHeroText from "@/components/SeasonalHeroText";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -49,7 +50,7 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-display font-extrabold leading-[1.1] text-secondary">
-              Algarve's <span className="text-primary">All-In-One</span> Climate Solution
+              Algarve's <SeasonalHeroText className="block">All-In-One</SeasonalHeroText> Climate Solution
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
