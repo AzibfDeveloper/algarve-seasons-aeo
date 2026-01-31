@@ -128,12 +128,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="font-bold mb-4 text-slate-900">Service Areas</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li>Faro</li>
-              <li>Lagos</li>
-              <li>Albufeira</li>
-              <li>Vilamoura</li>
-              <li>Portimão</li>
-              <li>Tavira</li>
+              <li><Link href="/faro"><div className="hover:text-primary cursor-pointer transition-colors">Faro</div></Link></li>
+              <li><Link href="/lagos"><div className="hover:text-primary cursor-pointer transition-colors">Lagos</div></Link></li>
+              <li><Link href="/albufeira"><div className="hover:text-primary cursor-pointer transition-colors">Albufeira</div></Link></li>
+              <li><Link href="/portimao"><div className="hover:text-primary cursor-pointer transition-colors">Portimão</div></Link></li>
+              <li><Link href="/loule"><div className="hover:text-primary cursor-pointer transition-colors">Loulé</div></Link></li>
+              <li><Link href="/silves"><div className="hover:text-primary cursor-pointer transition-colors">Silves</div></Link></li>
+              <li><Link href="/tavira"><div className="hover:text-primary cursor-pointer transition-colors">Tavira</div></Link></li>
+              <li><Link href="/olhao"><div className="hover:text-primary cursor-pointer transition-colors">Olhão</div></Link></li>
+              <li><Link href="/sao-bras"><div className="hover:text-primary cursor-pointer transition-colors">São Brás</div></Link></li>
+              <li><Link href="/lagoa"><div className="hover:text-primary cursor-pointer transition-colors">Lagoa</div></Link></li>
+              <li><Link href="/carriacao"><div className="hover:text-primary cursor-pointer transition-colors">Carriacão</div></Link></li>
+              <li><Link href="/monchique"><div className="hover:text-primary cursor-pointer transition-colors">Monchique</div></Link></li>
+              <li><Link href="/aljezur"><div className="hover:text-primary cursor-pointer transition-colors">Aljezur</div></Link></li>
+              <li><Link href="/vila-do-bispo"><div className="hover:text-primary cursor-pointer transition-colors">Vila do Bispo</div></Link></li>
+              <li><Link href="/castro-marim"><div className="hover:text-primary cursor-pointer transition-colors">Castro Marim</div></Link></li>
+              <li><Link href="/alcoutim"><div className="hover:text-primary cursor-pointer transition-colors">Alcoutim</div></Link></li>
             </ul>
           </div>
 
