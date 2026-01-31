@@ -2,11 +2,25 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, MapPin, Shield, Star, Sun, Wind, Zap } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import Reviews from "@/components/Reviews";
 
 export default function Home() {
+  const [, setLocation] = useLocation();
+
+  const handleContactClick = () => {
+    setLocation('/contact');
+  };
+
+  const handleServicesClick = () => {
+    setLocation('/services/air-conditioning');
+  };
+
+  const handleReviewsClick = () => {
+    window.open('https://www.google.com/search?q=Algarve+Seasons+reviews', '_blank');
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -43,10 +57,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-primary/20">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-primary/20" onClick={handleContactClick}>
                 Get Free Quote
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary font-bold h-14 px-8 text-lg hover:bg-secondary/5">
+              <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary font-bold h-14 px-8 text-lg hover:bg-secondary/5" onClick={handleServicesClick}>
                 View Services
               </Button>
             </div>
@@ -256,7 +270,7 @@ export default function Home() {
               </div>
             </div>
             
-            <Button size="lg" className="mt-4 bg-secondary text-white hover:bg-secondary/90">
+            <Button size="lg" className="mt-4 bg-secondary text-white hover:bg-secondary/90" onClick={handleReviewsClick}>
               Read Our Reviews
             </Button>
           </div>
@@ -271,12 +285,14 @@ export default function Home() {
             Get a free, no-obligation quote. Our team will assess your property, recommend the best solution, and provide transparent pricing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="h-14 px-8 text-lg font-bold bg-white text-primary hover:bg-gray-100 border-none">
+            <Button size="lg" variant="secondary" className="h-14 px-8 text-lg font-bold bg-white text-primary hover:bg-gray-100 border-none" onClick={handleContactClick}>
               Request Free Quote
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-bold border-2 border-white text-white hover:bg-white/10">
-              Call Now: +351 910 675 168
-            </Button>
+            <a href="tel:+351910675168">
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-bold border-2 border-white text-white hover:bg-white/10">
+                Call Now: +351 910 675 168
+              </Button>
+            </a>
           </div>
         </div>
       </section>

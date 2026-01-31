@@ -15,6 +15,7 @@ const HeatPumps = lazy(() => import("@/pages/services/HeatPumps"));
 const TeslaPowerwall = lazy(() => import("@/pages/services/TeslaPowerwall"));
 const Maintenance = lazy(() => import("@/pages/services/Maintenance"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const About = lazy(() => import("@/pages/About"));
 
 // Portuguese Pages
 const HomePT = lazy(() => import("@/pages/pt/HomePT"));
@@ -61,6 +62,7 @@ function Router() {
         <Route path={"/services/tesla-powerwall"} component={TeslaPowerwall} />
         <Route path={"/services/maintenance"} component={Maintenance} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/about"} component={About} />
         
         {/* Portuguese Routes */}
         <Route path="/pt-pt" component={HomePT} />

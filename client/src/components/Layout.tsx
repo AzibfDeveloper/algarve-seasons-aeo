@@ -28,8 +28,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <span>Serving the entire Algarve region</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-primary transition-colors">Facebook</a>
-            <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="https://www.facebook.com/algarveseasons" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
+            <a href="https://www.instagram.com/algarveseasons" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
             <div className="border-l border-slate-300 pl-4 ml-2">
               <LanguageSwitcher currentLang="en" />
             </div>
@@ -57,9 +57,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
               </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md">
-              Get Free Quote
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md">
+                Get Free Quote
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Nav */}
@@ -85,9 +87,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="pt-4 border-t border-slate-100">
                   <LanguageSwitcher currentLang="en" />
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
-                  Get Free Quote
-                </Button>
+                <Link href="/contact">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
+                    Get Free Quote
+                  </Button>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
