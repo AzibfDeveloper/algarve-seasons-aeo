@@ -145,6 +145,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/castro-marim"><div className="hover:text-primary cursor-pointer transition-colors">Castro Marim</div></Link></li>
               <li><Link href="/alcoutim"><div className="hover:text-primary cursor-pointer transition-colors">Alcoutim</div></Link></li>
             </ul>
+            <div className="mt-6 pt-4 border-t border-slate-300">
+              <Link href="/service-areas">
+                <button className="w-full px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-sm">
+                  View All Service Areas →
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div>

@@ -3,9 +3,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Wind, Sun, Flame, Zap, Star, MapPin, Phone } from "lucide-react";
 import { Link } from "wouter";
 import Reviews from "@/components/Reviews";
+import NearbyServiceAreas from "@/components/NearbyServiceAreas";
 
 interface GeoLandingProps {
   municipality: string;
+  municipalitySlug: string;
   region?: string;
   description: string;
   serviceAreas?: string[];
@@ -13,6 +15,7 @@ interface GeoLandingProps {
 
 export default function GeoLandingTemplate({
   municipality,
+  municipalitySlug,
   region = "Algarve",
   description,
   serviceAreas = [],
@@ -163,6 +166,9 @@ export default function GeoLandingTemplate({
           </div>
         </section>
       )}
+
+      {/* Nearby Service Areas */}
+      <NearbyServiceAreas currentMunicipality={municipalitySlug} municipalityName={municipality} />
 
       {/* Reviews */}
       <Reviews />

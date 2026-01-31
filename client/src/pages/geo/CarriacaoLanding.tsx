@@ -25,12 +25,14 @@ export default function CarriacaoLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Carriacão"
+          municipalitySlug="carriacao"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Carriacão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Carriacão and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />
       <Layout>
         <GeoLandingTemplate
           municipality="Carriacão"
+          municipalitySlug="carriacao"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Carriacão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Carriacão and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

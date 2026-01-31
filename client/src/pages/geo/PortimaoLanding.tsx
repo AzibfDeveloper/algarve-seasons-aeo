@@ -31,6 +31,7 @@ export default function PortimaoLanding() {
       <Layout>
         <GeoLandingTemplate
           municipality="Portimão"
+          municipalitySlug="portimao"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Portimão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Portimão and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

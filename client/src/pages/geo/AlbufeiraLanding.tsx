@@ -31,6 +31,7 @@ export default function AlbufeiraLanding() {
       <Layout>
         <GeoLandingTemplate
           municipality="Albufeira"
+          municipalitySlug="albufeira"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Albufeira. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Albufeira and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

@@ -25,12 +25,14 @@ export default function OlhaoLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Olhão"
+          municipalitySlug="olhao"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Olhão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Olhão and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />
       <Layout>
         <GeoLandingTemplate
           municipality="Olhão"
+          municipalitySlug="olhao"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Olhão. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Olhão and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

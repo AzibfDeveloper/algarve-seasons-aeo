@@ -25,12 +25,14 @@ export default function CastroMarimLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Castro Marim"
+          municipalitySlug="castro-marim"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Castro Marim. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Castro Marim and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />
       <Layout>
         <GeoLandingTemplate
           municipality="Castro Marim"
+          municipalitySlug="castro-marim"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Castro Marim. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Castro Marim and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

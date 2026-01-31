@@ -25,6 +25,7 @@ export default function TaviraPT() {
       <Layout>
         <GeoLandingTemplate
           municipality="Tavira"
+          municipalitySlug="tavira"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Tavira. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Tavira and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

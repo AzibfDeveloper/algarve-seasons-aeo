@@ -31,6 +31,7 @@ export default function FaroLanding() {
       <Layout>
         <GeoLandingTemplate
           municipality="Faro"
+          municipalitySlug="faro"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Faro. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Faro and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

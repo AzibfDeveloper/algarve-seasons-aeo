@@ -25,12 +25,14 @@ export default function SilvestLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Silves"
+          municipalitySlug="silves"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Silves. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Silves and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />
       <Layout>
         <GeoLandingTemplate
           municipality="Silves"
+          municipalitySlug="silves"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Silves. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Silves and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

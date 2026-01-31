@@ -31,6 +31,7 @@ export default function LagosLanding() {
       <Layout>
         <GeoLandingTemplate
           municipality="Lagos"
+          municipalitySlug="lagos"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in Lagos. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Lagos and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />
