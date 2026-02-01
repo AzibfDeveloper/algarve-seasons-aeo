@@ -188,28 +188,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <nav className="flex flex-col gap-4 mt-10">
                 <Link href="/">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Home</div>
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">Home</div>
                 </Link>
 
                 {/* Services */}
                 <div>
-                  <button onClick={() => setOpenDropdown(openDropdown === 'services' ? null : 'services')} className="w-full text-left text-lg font-medium hover:text-primary flex items-center justify-between">
+                  <button onClick={() => setOpenDropdown(openDropdown === 'services' ? null : 'services')} className="w-full text-left text-lg font-medium hover:text-primary flex items-center justify-between pr-4">
                     Services
                     <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'services' && (
                     <div className="pl-4 space-y-2 mt-2">
                       <Link href="/services/air-conditioning">
-                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer">Air Conditioning</div>
+                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer pr-4">Air Conditioning</div>
                       </Link>
                       <Link href="/services/solar-energy">
-                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer">Solar Energy</div>
+                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer pr-4">Solar Energy</div>
                       </Link>
                       <Link href="/services/heat-pumps">
-                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer">Heat Pumps</div>
+                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer pr-4">Heat Pumps</div>
                       </Link>
                       <Link href="/services/all-in-one">
-                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer font-semibold">All-In-One Solutions</div>
+                        <div className="text-base text-slate-600 hover:text-primary cursor-pointer font-semibold pr-4">All-In-One Solutions</div>
                       </Link>
                     </div>
                   )}
@@ -225,26 +225,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <div className="pl-4 space-y-2 mt-2 grid grid-cols-2 gap-2">
                       {majorTowns.map((town) => (
                         <Link key={town.href} href={town.href}>
-                          <div className="text-sm text-slate-600 hover:text-primary cursor-pointer">{town.label}</div>
+                          <div className="text-sm text-slate-600 hover:text-primary cursor-pointer pr-4">{town.label}</div>
                         </Link>
                       ))}
                       <Link href="/service-areas" className="col-span-2">
-                        <div className="text-sm text-primary font-semibold hover:underline cursor-pointer">View All →</div>
+                        <div className="text-sm text-primary font-semibold hover:underline cursor-pointer pr-4">View All →</div>
                       </Link>
                     </div>
                   )}
                 </div>
 
                 <Link href="/about">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer">About</div>
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">About</div>
                 </Link>
 
                 <Link href="/resources">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Resources</div>
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">Resources</div>
                 </Link>
 
                 <Link href="/faq">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer">FAQ</div>
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">FAQ</div>
                 </Link>
 
                 <Link href="/contact">
