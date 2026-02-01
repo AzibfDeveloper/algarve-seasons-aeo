@@ -4,6 +4,7 @@ import { Wind, Sun, Flame, Zap, Star, MapPin, Phone } from "lucide-react";
 import { Link } from "wouter";
 import Reviews from "@/components/Reviews";
 import NearbyServiceAreas from "@/components/NearbyServiceAreas";
+import GeoQuoteForm from "@/components/GeoQuoteForm";
 
 interface GeoLandingProps {
   municipality: string;
@@ -37,11 +38,13 @@ export default function GeoLandingTemplate({
               {description} Explore our <a href="/service-areas" className="text-orange-600 font-semibold hover:underline">complete service areas</a> or learn about our <a href="/faq" className="text-orange-600 font-semibold hover:underline">frequently asked questions</a>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link href={`/contact?municipality=${municipality}`}>
-                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-                  Get Free Quote in {municipality}
-                </Button>
-              </Link>
+              <GeoQuoteForm
+                municipality={municipality}
+                municipalitySlug={municipalitySlug}
+                triggerText={`Get Free Quote in ${municipality}`}
+                triggerVariant="default"
+                triggerSize="lg"
+              />
               <Link href="/services/air-conditioning">
                 <Button size="lg" variant="outline" className="border-slate-300">
                   View Services

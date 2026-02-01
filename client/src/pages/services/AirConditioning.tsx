@@ -241,9 +241,15 @@ export default function AirConditioning() {
               { name: 'Olhão', href: '/olhao' },
               { name: 'Silves', href: '/silves' },
               { name: 'Lagoa', href: '/lagoa' },
-              { name: 'Lagos', href: '/lagos' }
+              { name: 'Carriacão', href: '/carriacao' },
+              { name: 'Monchique', href: '/monchique' },
+              { name: 'Aljezur', href: '/aljezur' },
+              { name: 'Vila do Bispo', href: '/vila-do-bispo' },
+              { name: 'Castro Marim', href: '/castro-marim' },
+              { name: 'Alcoutim', href: '/alcoutim' },
+              { name: 'São Brás', href: '/sao-bras' }
             ].map((city) => (
-              <a key={city.name} href={city.href} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+              <a key={city.href} href={city.href} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                 <MapPin className="w-4 h-4 text-secondary" /> {city.name}
               </a>
             ))}
