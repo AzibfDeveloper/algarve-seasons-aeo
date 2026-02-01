@@ -18,6 +18,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const About = lazy(() => import("@/pages/About"));
 const ServiceAreas = lazy(() => import("@/pages/ServiceAreas"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
+const QuoteConfirmation = lazy(() => import("@/pages/QuoteConfirmation"));
 
 // Portuguese Pages
 const HomePT = lazy(() => import("@/pages/pt/HomePT"));
@@ -67,6 +68,7 @@ function Router() {
         <Route path="/service-areas" component={ServiceAreas} />
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/quote-confirmation" component={QuoteConfirmation} />
         
         {/* Portuguese Routes */}
         <Route path="/pt-pt" component={HomePT} />

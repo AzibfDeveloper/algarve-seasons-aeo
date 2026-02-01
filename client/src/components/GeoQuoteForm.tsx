@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -19,6 +20,7 @@ export default function GeoQuoteForm({
   triggerVariant = "default",
   triggerSize = "default"
 }: GeoQuoteFormProps) {
+  const [, navigate] = useLocation();
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -71,7 +73,8 @@ export default function GeoQuoteForm({
         propertyType: "",
         message: ""
       });
-    }, 2000);
+      navigate(`/quote-confirmation?municipality=${encodeURIComponent(municipality)}`);
+    }, 1500);
   };
 
   return (
