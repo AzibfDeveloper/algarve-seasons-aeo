@@ -90,23 +90,13 @@ export default function Home() {
             
             {/* Floating Glass Card */}
             <div className="absolute bottom-12 -left-12 bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl z-20 max-w-xs border border-white/50">
-              <div className="flex items-center gap-4 mb-3">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
                   <Shield className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <p className="font-bold text-secondary">Trusted Quality</p>
                   <p className="text-xs text-muted-foreground">200+ Installations since 2016</p>
-                </div>
-              </div>
-              <div className="flex -space-x-2 overflow-hidden">
-                {[1,2,3,4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-500">
-                    User
-                  </div>
-                ))}
-                <div className="w-8 h-8 rounded-full bg-primary text-white border-2 border-white flex items-center justify-center text-[10px] font-bold">
-                  +200
                 </div>
               </div>
             </div>
