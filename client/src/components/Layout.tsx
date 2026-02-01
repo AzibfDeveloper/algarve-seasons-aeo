@@ -4,6 +4,8 @@ import { Menu, Phone, Sun, ChevronDown, Home, Wrench, MapPin, Info, BookOpen, He
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
+import { ScrollToTop } from "./ScrollToTop";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -291,6 +293,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-1">
         {children}
       </main>
+
+      {/* Floating Action Buttons */}
+      <WhatsAppButton />
+      <ScrollToTop />
 
       {/* Footer */}
       <footer className="bg-slate-50 text-slate-600 py-12 border-t border-slate-200">
