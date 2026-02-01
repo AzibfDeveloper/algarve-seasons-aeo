@@ -347,8 +347,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="font-bold mb-4 text-slate-900">Contact</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li>+351 910 675 168</li>
-              <li>Dan@algarveseasons.com</li>
+              <li><a href="tel:+351910675168" className="hover:text-primary transition-colors">+351 910 675 168</a></li>
+              <li><a href="mailto:Dan@algarveseasons.com" className="hover:text-primary transition-colors">Dan@algarveseasons.com</a></li>
               <li>Mon-Sat: 9am - 6pm</li>
               <li className="pt-4 border-t border-slate-300">
                 <Link href="/privacy-terms"><div className="hover:text-primary cursor-pointer text-xs">Privacy & Terms</div></Link>
