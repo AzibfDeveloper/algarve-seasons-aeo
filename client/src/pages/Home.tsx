@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import Reviews from "@/components/Reviews";
 import SeasonalHeroText from "@/components/SeasonalHeroText";
+import TrustBadges from "@/components/TrustBadges";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -201,6 +202,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TrustBadges />
 
       <Reviews />
 
