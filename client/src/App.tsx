@@ -19,6 +19,11 @@ const About = lazy(() => import("@/pages/About"));
 const ServiceAreas = lazy(() => import("@/pages/ServiceAreas"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const QuoteConfirmation = lazy(() => import("@/pages/QuoteConfirmation"));
+const AllInOneSolutions = lazy(() => import("@/pages/services/AllInOneSolutions"));
+const Testimonials = lazy(() => import("@/pages/Testimonials"));
+const ResourcesGuides = lazy(() => import("@/pages/ResourcesGuides"));
+const Careers = lazy(() => import("@/pages/Careers"));
+const PrivacyTerms = lazy(() => import("@/pages/PrivacyTerms"));
 
 // Portuguese Pages
 const HomePT = lazy(() => import("@/pages/pt/HomePT"));
@@ -69,6 +74,11 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
         <Route path="/quote-confirmation" component={QuoteConfirmation} />
+        <Route path="/services/all-in-one" component={AllInOneSolutions} />
+        <Route path="/testimonials" component={Testimonials} />
+        <Route path="/resources" component={ResourcesGuides} />
+        <Route path="/careers" component={Careers} />
+        <Route path="/privacy-terms" component={PrivacyTerms} />
         
         {/* Portuguese Routes */}
         <Route path="/pt-pt" component={HomePT} />
