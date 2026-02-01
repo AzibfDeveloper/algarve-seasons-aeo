@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Menu, Phone, Sun, ChevronDown } from "lucide-react";
+import { Menu, Phone, Sun, ChevronDown, Home, Wrench, MapPin, Info, BookOpen, HelpCircle, Mail } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
@@ -188,13 +188,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <nav className="flex flex-col gap-4 mt-10">
                 <Link href="/">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">Home</div>
+                  <div className="flex items-center gap-3 text-lg font-medium hover:text-primary cursor-pointer pr-4">
+                    <Home className="w-5 h-5" />
+                    Home
+                  </div>
                 </Link>
 
                 {/* Services */}
                 <div>
-                  <button onClick={() => setOpenDropdown(openDropdown === 'services' ? null : 'services')} className="w-full text-left text-lg font-medium hover:text-primary flex items-center justify-between pr-4">
-                    Services
+                  <button onClick={() => setOpenDropdown(openDropdown === 'services' ? null : 'services')} className="w-full text-left text-lg font-medium hover:text-primary flex items-center justify-between">
+                    <span className="flex items-center gap-3">
+                      <Wrench className="w-5 h-5" />
+                      Services
+                    </span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'services' && (
@@ -218,7 +224,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {/* Service Areas */}
                 <div>
                   <button onClick={() => setOpenDropdown(openDropdown === 'areas' ? null : 'areas')} className="w-full text-left text-lg font-medium hover:text-primary flex items-center justify-between">
-                    Service Areas
+                    <span className="flex items-center gap-3">
+                      <MapPin className="w-5 h-5" />
+                      Service Areas
+                    </span>
                     <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === 'areas' ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === 'areas' && (
@@ -236,19 +245,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
 
                 <Link href="/about">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">About</div>
+                  <div className="flex items-center gap-3 text-lg font-medium hover:text-primary cursor-pointer pr-4">
+                    <Info className="w-5 h-5" />
+                    About
+                  </div>
                 </Link>
 
                 <Link href="/resources">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">Resources</div>
+                  <div className="flex items-center gap-3 text-lg font-medium hover:text-primary cursor-pointer pr-4">
+                    <BookOpen className="w-5 h-5" />
+                    Resources
+                  </div>
                 </Link>
 
                 <Link href="/faq">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer pr-4">FAQ</div>
+                  <div className="flex items-center gap-3 text-lg font-medium hover:text-primary cursor-pointer pr-4">
+                    <HelpCircle className="w-5 h-5" />
+                    FAQ
+                  </div>
                 </Link>
 
                 <Link href="/contact">
-                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Contact</div>
+                  <div className="flex items-center gap-3 text-lg font-medium hover:text-primary cursor-pointer">
+                    <Mail className="w-5 h-5" />
+                    Contact
+                  </div>
                 </Link>
 
                 <div className="pt-4 border-t border-slate-100">
