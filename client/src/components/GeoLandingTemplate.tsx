@@ -34,7 +34,7 @@ export default function GeoLandingTemplate({
               HVAC & Solar Solutions in <span className="text-orange-600">{municipality}</span>
             </h1>
             <p className="text-lg text-slate-700 max-w-2xl">
-              {description}
+              {description} Explore our <a href="/service-areas" className="text-orange-600 font-semibold hover:underline">complete service areas</a> or learn about our <a href="/faq" className="text-orange-600 font-semibold hover:underline">frequently asked questions</a>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href={`/contact?municipality=${municipality}`}>
@@ -153,15 +153,17 @@ export default function GeoLandingTemplate({
               Service Areas Near {municipality}
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              {serviceAreas.map((area) => (
-                <div
-                  key={area}
-                  className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200"
-                >
-                  <MapPin className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                  <span className="text-slate-700">{area}</span>
-                </div>
-              ))}
+              {serviceAreas.map((area) => {
+                const areaSlug = area.toLowerCase().replace(/\s+/g, '-').replace(/ã/g, 'a').replace(/é/g, 'e');
+                return (
+                  <Link key={area} href={`/${areaSlug}`}>
+                    <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200 hover:bg-slate-100 hover:border-orange-300 cursor-pointer transition-colors">
+                      <MapPin className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                      <span className="text-slate-700">{area}</span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -180,7 +182,7 @@ export default function GeoLandingTemplate({
             Ready to Upgrade Your Climate Control?
           </h2>
           <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">
-            Get a free, no-obligation quote for air conditioning, solar, heat pumps, or battery storage in {municipality}.
+            Get a free, no-obligation quote for <a href="/services/air-conditioning" className="text-white font-semibold hover:underline">air conditioning</a>, <a href="/services/solar-energy" className="text-white font-semibold hover:underline">solar</a>, <a href="/services/heat-pumps" className="text-white font-semibold hover:underline">heat pumps</a>, or <a href="/services/tesla-powerwall" className="text-white font-semibold hover:underline">battery storage</a> in {municipality}.
           </p>
           <Link href={`/contact?municipality=${municipality}`}>
             <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50">

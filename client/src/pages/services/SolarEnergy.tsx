@@ -41,12 +41,16 @@ export default function SolarEnergy() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-primary/20">
-                Get Free Solar Quote
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary font-bold h-14 px-8 text-lg hover:bg-primary/5">
-                Calculate Savings
-              </Button>
+              <a href="/contact" className="inline-flex items-center justify-center">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-primary/20">
+                  Get Free Solar Quote
+                </Button>
+              </a>
+              <a href="/services/tesla-powerwall" className="inline-flex items-center justify-center">
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary font-bold h-14 px-8 text-lg hover:bg-primary/5">
+                  Calculate Savings
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -82,7 +86,7 @@ export default function SolarEnergy() {
               <div className="max-w-2xl mb-12">
                 <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Solar is a Smart Investment in the Algarve</h2>
                 <p className="text-lg text-muted-foreground">
-                  With over 300 days of sunshine per year, the Algarve is one of the best places in Europe for solar energy production.
+                  With over 300 days of sunshine per year, the Algarve is one of the best places in Europe for solar energy production. Combine solar panels with <a href="/services/heat-pumps" className="text-primary font-semibold hover:underline">heat pump technology</a> and <a href="/services/air-conditioning" className="text-primary font-semibold hover:underline">air conditioning systems</a> for <a href="/service-areas" className="text-primary font-semibold hover:underline">integrated climate and energy solutions</a> that maximize your savings.
                 </p>
               </div>
 
@@ -144,7 +148,9 @@ export default function SolarEnergy() {
                   <span><span className="font-bold">Custom Design:</span> Roof-mounted, ground-mounted, or pergola integration options.</span>
                 </li>
               </ul>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white">Request Solar Quote</Button>
+              <a href="/contact" className="block">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white">Request Solar Quote</Button>
+              </a>
             </div>
 
             {/* Battery Storage */}
@@ -166,7 +172,9 @@ export default function SolarEnergy() {
                   <span><span className="font-bold">Backup Power:</span> Keep essential lights and appliances running during grid outages.</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/5">Learn About Batteries</Button>
+              <a href="/services/tesla-powerwall" className="block">
+                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/5">Learn About Batteries</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -176,6 +184,7 @@ export default function SolarEnergy() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-display font-bold mb-8 text-center">Common Questions About Solar in Portugal</h2>
+          <p className="text-center text-muted-foreground mb-8">For more comprehensive answers, <a href="/faq" className="text-primary font-semibold hover:underline">see our full FAQ section</a> covering solar incentives, installation, and warranty coverage.</p>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -222,16 +231,28 @@ export default function SolarEnergy() {
         <div className="container text-center">
           <h2 className="text-3xl font-display font-bold mb-8">Serving All 16 Algarve Municipalities</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Faro', 'Albufeira', 'Lagos', 'Portimão', 'Vilamoura', 'Loulé', 'Tavira', 'Olhão', 'Silves', 'Lagoa'].map((city) => (
-              <span key={city} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors cursor-default">
-                <MapPin className="w-4 h-4 text-primary" /> {city}
-              </span>
+            {[
+              { name: 'Faro', href: '/faro' },
+              { name: 'Albufeira', href: '/albufeira' },
+              { name: 'Lagos', href: '/lagos' },
+              { name: 'Portimão', href: '/portimao' },
+              { name: 'Loulé', href: '/loule' },
+              { name: 'Tavira', href: '/tavira' },
+              { name: 'Olhão', href: '/olhao' },
+              { name: 'Silves', href: '/silves' },
+              { name: 'Lagoa', href: '/lagoa' }
+            ].map((city) => (
+              <a key={city.name} href={city.href} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                <MapPin className="w-4 h-4 text-primary" /> {city.name}
+              </a>
             ))}
           </div>
           <div className="mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold px-8">
-              Get Your Free Quote Now
-            </Button>
+            <a href="/contact" className="inline-block">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold px-8">
+                Get Your Free Quote Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>

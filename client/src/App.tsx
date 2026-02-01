@@ -63,6 +63,7 @@ function Router() {
         <Route path={"/services/heat-pumps"} component={HeatPumps} />
         <Route path={"/services/tesla-powerwall"} component={TeslaPowerwall} />
         <Route path={"/services/maintenance"} component={Maintenance} />
+        <Route path="/contact" component={Contact} />
         <Route path="/service-areas" component={ServiceAreas} />
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />

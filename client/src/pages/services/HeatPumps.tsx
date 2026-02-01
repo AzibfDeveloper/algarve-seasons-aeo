@@ -33,12 +33,16 @@ export default function HeatPumps() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-accent/20">
-                Get Free Heat Pump Quote
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-accent text-accent font-bold h-14 px-8 text-lg hover:bg-accent/5">
-                How It Works
-              </Button>
+              <a href="/contact" className="inline-flex items-center justify-center">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-accent/20">
+                  Get Free Heat Pump Quote
+                </Button>
+              </a>
+              <a href="/faq" className="inline-flex items-center justify-center">
+                <Button size="lg" variant="outline" className="border-2 border-accent text-accent font-bold h-14 px-8 text-lg hover:bg-accent/5">
+                  How It Works
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -72,7 +76,7 @@ export default function HeatPumps() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Choose a Heat Pump in the Algarve?</h2>
             <p className="text-lg text-muted-foreground">
-              Heat pumps are the future of home comfort, offering superior efficiency compared to traditional gas or electric boilers.
+              Heat pumps are the future of home comfort, offering superior efficiency compared to traditional gas or electric boilers. Combine heat pumps with <a href="/services/solar-energy" className="text-accent font-semibold hover:underline">solar energy systems</a> and <a href="/services/air-conditioning" className="text-accent font-semibold hover:underline">air conditioning</a> for <a href="/service-areas" className="text-accent font-semibold hover:underline">all-in-one climate solutions</a> that maximize comfort and savings.
             </p>
           </div>
 
@@ -130,7 +134,9 @@ export default function HeatPumps() {
                   <span><span className="font-bold">Smart Control:</span> Manage heating and hot water schedules via smartphone app.</span>
                 </li>
               </ul>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-white">Request Heat Pump Quote</Button>
+              <a href="/contact" className="block">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white">Request Heat Pump Quote</Button>
+              </a>
             </div>
 
             {/* Pool Heating */}
@@ -155,7 +161,9 @@ export default function HeatPumps() {
                   <span><span className="font-bold">Inverter Technology:</span> Adjusts power output to maintain temperature efficiently.</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent/5">View Pool Solutions</Button>
+              <a href="/contact" className="block">
+                <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent/5">View Pool Solutions</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -165,6 +173,7 @@ export default function HeatPumps() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-display font-bold mb-8 text-center">Common Questions About Heat Pumps</h2>
+          <p className="text-center text-muted-foreground mb-8">For comprehensive answers, <a href="/faq" className="text-accent font-semibold hover:underline">see our full FAQ section</a> covering heat pump installation, efficiency, and warranty.</p>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -211,16 +220,28 @@ export default function HeatPumps() {
         <div className="container text-center">
           <h2 className="text-3xl font-display font-bold mb-8">Serving All 16 Algarve Municipalities</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Faro', 'Albufeira', 'Lagos', 'Portimão', 'Vilamoura', 'Loulé', 'Tavira', 'Olhão', 'Silves', 'Lagoa'].map((city) => (
-              <span key={city} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors cursor-default">
-                <MapPin className="w-4 h-4 text-accent" /> {city}
-              </span>
+            {[
+              { name: 'Faro', href: '/faro' },
+              { name: 'Albufeira', href: '/albufeira' },
+              { name: 'Lagos', href: '/lagos' },
+              { name: 'Portimão', href: '/portimao' },
+              { name: 'Loulé', href: '/loule' },
+              { name: 'Tavira', href: '/tavira' },
+              { name: 'Olhão', href: '/olhao' },
+              { name: 'Silves', href: '/silves' },
+              { name: 'Lagoa', href: '/lagoa' }
+            ].map((city) => (
+              <a key={city.name} href={city.href} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                <MapPin className="w-4 h-4 text-accent" /> {city.name}
+              </a>
             ))}
           </div>
           <div className="mt-12">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold px-8">
-              Get Your Free Quote Now
-            </Button>
+            <a href="/contact" className="inline-block">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-bold px-8">
+                Get Your Free Quote Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>

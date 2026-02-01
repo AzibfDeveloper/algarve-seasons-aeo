@@ -41,12 +41,16 @@ export default function AirConditioning() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-secondary/20">
-                Get Free AC Quote
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary font-bold h-14 px-8 text-lg hover:bg-secondary/5">
-                Emergency Repair: Call Now
-              </Button>
+              <a href="/contact" className="inline-flex items-center justify-center">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-secondary/20">
+                  Get Free AC Quote
+                </Button>
+              </a>
+              <a href="tel:+351910675168" className="inline-flex items-center justify-center">
+                <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary font-bold h-14 px-8 text-lg hover:bg-secondary/5">
+                  Emergency Repair: Call Now
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -82,7 +86,7 @@ export default function AirConditioning() {
               <div className="max-w-2xl mb-12">
                 <h2 className="text-4xl font-display font-bold text-slate-900 mb-6">Why Air Conditioning is Essential in the Algarve</h2>
                 <p className="text-lg text-muted-foreground">
-                  With summer peaks reaching 40°C and mild but damp winters, modern AC is your year-round climate solution.
+                  With summer peaks reaching 40°C and mild but damp winters, modern AC is your year-round climate solution. Consider combining air conditioning with <a href="/services/solar-energy" className="text-secondary font-semibold hover:underline">solar energy systems</a> and <a href="/services/heat-pumps" className="text-secondary font-semibold hover:underline">heat pump technology</a> for <a href="/service-areas" className="text-secondary font-semibold hover:underline">integrated climate and energy solutions</a> across your property.
                 </p>
               </div>
 
@@ -144,7 +148,9 @@ export default function AirConditioning() {
                   <span><span className="font-bold">VRV systems:</span> High-capacity solutions for large villas and commercial spaces.</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">Request Installation Quote</Button>
+              <a href="/contact" className="block">
+                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">Request Installation Quote</Button>
+              </a>
             </div>
 
             {/* Repair & Maintenance */}
@@ -166,7 +172,9 @@ export default function AirConditioning() {
                   <span><span className="font-bold">Rental Packages:</span> Maintenance plans specifically for holiday rental properties.</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/5">Schedule Maintenance</Button>
+              <a href="/contact" className="block">
+                <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/5">Schedule Maintenance</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -176,6 +184,7 @@ export default function AirConditioning() {
       <section className="py-20 bg-white">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-display font-bold mb-8 text-center">Common Questions About AC in the Algarve</h2>
+          <p className="text-center text-muted-foreground mb-8">For comprehensive answers to all your air conditioning questions, <a href="/faq" className="text-secondary font-semibold hover:underline">see our full FAQ section</a> covering installation, maintenance, and warranty coverage.</p>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -222,16 +231,29 @@ export default function AirConditioning() {
         <div className="container text-center">
           <h2 className="text-3xl font-display font-bold mb-8">Serving All 16 Algarve Municipalities</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Faro', 'Albufeira', 'Lagos', 'Portimão', 'Vilamoura', 'Loulé', 'Tavira', 'Olhão', 'Silves', 'Lagoa'].map((city) => (
-              <span key={city} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors cursor-default">
-                <MapPin className="w-4 h-4 text-secondary" /> {city}
-              </span>
+            {[
+              { name: 'Faro', href: '/faro' },
+              { name: 'Albufeira', href: '/albufeira' },
+              { name: 'Lagos', href: '/lagos' },
+              { name: 'Portimão', href: '/portimao' },
+              { name: 'Loulé', href: '/loule' },
+              { name: 'Tavira', href: '/tavira' },
+              { name: 'Olhão', href: '/olhao' },
+              { name: 'Silves', href: '/silves' },
+              { name: 'Lagoa', href: '/lagoa' },
+              { name: 'Lagos', href: '/lagos' }
+            ].map((city) => (
+              <a key={city.name} href={city.href} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                <MapPin className="w-4 h-4 text-secondary" /> {city.name}
+              </a>
             ))}
           </div>
           <div className="mt-12">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold px-8">
-              Get Your Free Quote Now
-            </Button>
+            <a href="/contact" className="inline-block">
+              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-bold px-8">
+                Get Your Free Quote Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>
