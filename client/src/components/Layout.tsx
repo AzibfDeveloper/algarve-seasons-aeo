@@ -12,6 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/services/air-conditioning", label: "Air Conditioning" },
     { href: "/services/solar-energy", label: "Solar Energy" },
     { href: "/services/heat-pumps", label: "Heat Pumps" },
+    { href: "/faq", label: "FAQ" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ];
