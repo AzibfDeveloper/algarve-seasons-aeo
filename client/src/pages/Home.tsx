@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Layout>
       <Helmet>
-        <title>Algarve Seasons | #1 HVAC, Solar & Heat Pump Specialists in Algarve</title>
+        <title>HVAC, Solar & Heat Pumps | Algarve</title>
         <meta name="description" content="Algarve Seasons is the premium Daikin D1+ Partner for air conditioning, solar panels, and heat pumps in Faro, Lagos, and Albufeira. Get a free quote today." />
         <meta name="keywords" content="HVAC Algarve, Air Conditioning Faro, Solar Panels Portugal, Heat Pumps Algarve, Daikin Installer" />
         <link rel="canonical" href="https://algarveseasons.com/" />
