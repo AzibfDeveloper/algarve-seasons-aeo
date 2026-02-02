@@ -25,7 +25,6 @@ export default function VilaDoBispoLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Vila do Bispo"
-          municipalitySlug="vila-do-bispo"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Vila do Bispo. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Vila do Bispo and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />

@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Lightbulb, Zap, Leaf, Sun, Wind, Clock, User, ArrowRight } from "lucide-react";
-import { useState } from "react";
 import { articles } from "@/lib/articlesData";
 import { useLocation } from "wouter";
 
@@ -85,11 +85,13 @@ export default function ResourcesGuides() {
                 if (paragraph.startsWith('#')) {
                   const level = paragraph.match(/^#+/)?.[0].length || 1;
                   const text = paragraph.replace(/^#+\s/, '');
-                  const HeadingTag = `h${Math.min(level + 1, 6)}` as keyof JSX.IntrinsicElements;
-                  return (
-                    <HeadingTag key={idx} className={`font-bold text-secondary mt-8 mb-4 ${level === 1 ? 'text-3xl' : level === 2 ? 'text-2xl' : 'text-xl'}`}>
-                      {text}
-                    </HeadingTag>
+                  const HeadingLevel = Math.min(level + 1, 6);
+                  const headingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
+                  const HeadingTag = headingTags[HeadingLevel - 1];
+                  return React.createElement(
+                    HeadingTag as any,
+                    { key: idx, className: `font-bold text-secondary mt-8 mb-4 ${level === 1 ? 'text-3xl' : level === 2 ? 'text-2xl' : 'text-xl'}` },
+                    text
                   );
                 } else if (paragraph.startsWith('|')) {
                   // Simple table rendering

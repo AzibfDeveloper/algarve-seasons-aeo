@@ -25,7 +25,6 @@ export default function AlcoutimLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Alcoutim"
-          municipalitySlug="alcoutim"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Alcoutim. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Alcoutim and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />

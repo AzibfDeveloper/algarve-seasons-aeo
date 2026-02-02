@@ -25,7 +25,6 @@ export default function AljeZurLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Aljezur"
-          municipalitySlug="aljezur"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Aljezur. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Aljezur and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />

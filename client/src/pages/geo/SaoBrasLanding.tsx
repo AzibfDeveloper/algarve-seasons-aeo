@@ -31,6 +31,7 @@ export default function SaoBrasLanding() {
       <Layout>
         <GeoLandingTemplate
           municipality="São Brás de Alportel"
+          municipalitySlug="sao-bras"
           description="Algarve Seasons is the leading HVAC and renewable energy provider in São Brás de Alportel. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving São Brás and surrounding areas since 2016."
           serviceAreas={serviceAreas}
         />

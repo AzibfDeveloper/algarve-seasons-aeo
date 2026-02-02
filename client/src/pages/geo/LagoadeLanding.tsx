@@ -25,7 +25,6 @@ export default function LagoadeLanding() {
       </Helmet>
       <LocalBusinessSchema
         municipality="Lagoa"
-          municipalitySlug="lagoa"
         description="Algarve Seasons is the leading HVAC and renewable energy provider in Lagoa. We specialize in Daikin air conditioning installations, solar energy systems, heat pumps, and Tesla Powerwall battery storage. Serving Lagoa and surrounding areas since 2016."
         serviceAreas={serviceAreas}
       />
