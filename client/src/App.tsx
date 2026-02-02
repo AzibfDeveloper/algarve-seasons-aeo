@@ -31,6 +31,14 @@ const AirConditioningPT = lazy(() => import("@/pages/pt/services/AirConditioning
 const SolarEnergyPT = lazy(() => import("@/pages/pt/services/SolarEnergyPT"));
 const HeatPumpsPT = lazy(() => import("@/pages/pt/services/HeatPumpsPT"));
 const TeslaPowerwallPT = lazy(() => import("@/pages/pt/services/TeslaPowerwallPT"));
+const SobrePT = lazy(() => import("@/pages/pt/SobrePT"));
+const FAQPT = lazy(() => import("@/pages/pt/FAQPT"));
+const DepoimentosPT = lazy(() => import("@/pages/pt/DepoimentosPT"));
+const RecursosPT = lazy(() => import("@/pages/pt/RecursosPT"));
+const CarreirasPT = lazy(() => import("@/pages/pt/CarreirasPT"));
+const PrivacidadePT = lazy(() => import("@/pages/pt/PrivacidadePT"));
+const SolucoesPT = lazy(() => import("@/pages/pt/SolucoesPT"));
+const AreasServicoPT = lazy(() => import("@/pages/pt/AreasServicoPT"));
 
 // Geo-targeted Landing Pages
 const FaroLanding = lazy(() => import("@/pages/geo/FaroLanding"));
@@ -82,10 +90,18 @@ function Router() {
         
         {/* Portuguese Routes */}
         <Route path="/pt-pt" component={HomePT} />
-        <Route path="/pt-pt/ar-condicionado" component={AirConditioningPT} />
-        <Route path="/pt-pt/energia-solar" component={SolarEnergyPT} />
-        <Route path="/pt-pt/bombas-de-calor" component={HeatPumpsPT} />
-        <Route path="/pt-pt/tesla-powerwall" component={TeslaPowerwallPT} />
+        <Route path="/pt-pt/servicos/ar-condicionado" component={AirConditioningPT} />
+        <Route path="/pt-pt/servicos/energia-solar" component={SolarEnergyPT} />
+        <Route path="/pt-pt/servicos/bombas-calor" component={HeatPumpsPT} />
+        <Route path="/pt-pt/servicos/tesla-powerwall" component={TeslaPowerwallPT} />
+        <Route path="/pt-pt/sobre" component={SobrePT} />
+        <Route path="/pt-pt/faq" component={FAQPT} />
+        <Route path="/pt-pt/depoimentos" component={DepoimentosPT} />
+        <Route path="/pt-pt/recursos" component={RecursosPT} />
+        <Route path="/pt-pt/carreiras" component={CarreirasPT} />
+        <Route path="/pt-pt/privacidade" component={PrivacidadePT} />
+        <Route path="/pt-pt/servicos/solucoes-integradas" component={SolucoesPT} />
+        <Route path="/pt-pt/areas-servico" component={AreasServicoPT} />
         
         {/* Geo-targeted Landing Pages */}
         <Route path="/faro" component={FaroLanding} />

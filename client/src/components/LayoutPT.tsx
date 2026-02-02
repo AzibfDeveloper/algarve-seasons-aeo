@@ -1,19 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useLocation } from "wouter";
+import { useState } from "react";
+import { ScrollToTop } from "./ScrollToTop";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 export default function LayoutPT({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const navLinks = [
-    { href: "/pt-pt", label: "Início" },
+  const serviceLinks = [
     { href: "/pt-pt/servicos/ar-condicionado", label: "Ar Condicionado" },
     { href: "/pt-pt/servicos/energia-solar", label: "Energia Solar" },
     { href: "/pt-pt/servicos/bombas-calor", label: "Bombas de Calor" },
-    { href: "/pt-pt/sobre", label: "Sobre Nós" },
-    { href: "/pt-pt/contacto", label: "Contacto" },
+    { href: "/pt-pt/servicos/solucoes-integradas", label: "Soluções Integradas" },
+  ];
+
+  const serviceAreas = [
+    { href: "/pt-pt/faro", label: "Faro" },
+    { href: "/pt-pt/albufeira", label: "Albufeira" },
+    { href: "/pt-pt/lagos", label: "Lagos" },
+    { href: "/pt-pt/portimao", label: "Portimão" },
+    { href: "/pt-pt/loule", label: "Loulé" },
+    { href: "/pt-pt/tavira", label: "Tavira" },
+    { href: "/pt-pt/olhao", label: "Olhão" },
+    { href: "/pt-pt/silves", label: "Silves" },
+    { href: "/pt-pt/lagoa", label: "Lagoa" },
+    { href: "/pt-pt/carriacao", label: "Carriacão" },
+    { href: "/pt-pt/monchique", label: "Monchique" },
+    { href: "/pt-pt/aljezur", label: "Aljezur" },
+    { href: "/pt-pt/vila-do-bispo", label: "Vila do Bispo" },
+    { href: "/pt-pt/castro-marim", label: "Castro Marim" },
+    { href: "/pt-pt/alcoutim", label: "Alcoutim" },
+    { href: "/pt-pt/sao-bras", label: "São Brás" },
   ];
 
   return (
@@ -22,14 +43,14 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
       <div className="bg-secondary text-secondary-foreground py-2 text-sm hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-2">
+            <a href="tel:+351910675168" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" /> +351 910 675 168
-            </span>
+            </a>
             <span>Servindo toda a região do Algarve</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-primary transition-colors">Facebook</a>
-            <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
             <div className="border-l border-slate-300 pl-4 ml-2">
               <LanguageSwitcher currentLang="pt" />
             </div>
@@ -47,17 +68,82 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <div className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                  location === link.href ? "text-primary" : "text-muted-foreground"
-                }`}>
-                  {link.label}
-                </div>
-              </Link>
-            ))}
-            <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md">
+          <nav className="hidden md:flex items-center gap-1">
+            <Link href="/pt-pt">
+              <div className={`px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                location === "/pt-pt" ? "text-primary" : "text-muted-foreground"
+              }`}>
+                Início
+              </div>
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                Serviços
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 mt-0 w-48 bg-white border border-slate-100 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {serviceLinks.map((link) => (
+                  <Link key={link.href} href={link.href}>
+                    <div className="px-4 py-3 text-sm hover:bg-slate-50 hover:text-primary cursor-pointer border-b border-slate-50 last:border-b-0">
+                      {link.label}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Service Areas Dropdown */}
+            <div className="relative group">
+              <button className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                Áreas de Serviço
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 mt-0 w-56 bg-white border border-slate-100 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 grid grid-cols-2 gap-0">
+                {serviceAreas.map((area) => (
+                  <Link key={area.href} href={area.href}>
+                    <div className="px-4 py-2 text-sm hover:bg-slate-50 hover:text-primary cursor-pointer border-b border-slate-50">
+                      {area.label}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link href="/pt-pt/sobre">
+              <div className={`px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                location === "/pt-pt/sobre" ? "text-primary" : "text-muted-foreground"
+              }`}>
+                Sobre Nós
+              </div>
+            </Link>
+
+            <Link href="/pt-pt/recursos">
+              <div className={`px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                location === "/pt-pt/recursos" ? "text-primary" : "text-muted-foreground"
+              }`}>
+                Recursos
+              </div>
+            </Link>
+
+            <Link href="/pt-pt/faq">
+              <div className={`px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                location === "/pt-pt/faq" ? "text-primary" : "text-muted-foreground"
+              }`}>
+                FAQ
+              </div>
+            </Link>
+
+            <Link href="/pt-pt/contacto">
+              <div className={`px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                location === "/pt-pt/contacto" ? "text-primary" : "text-muted-foreground"
+              }`}>
+                Contacto
+              </div>
+            </Link>
+
+            <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md ml-4">
               Pedir Orçamento
             </Button>
           </nav>
@@ -69,19 +155,72 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="w-72">
               <div className="sr-only">
                 <SheetTitle>Menu de Navegação</SheetTitle>
                 <SheetDescription>Aceda às secções e serviços do site</SheetDescription>
               </div>
-              <nav className="flex flex-col gap-6 mt-10">
-                {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
-                    <div className="text-lg font-medium hover:text-primary cursor-pointer">
-                      {link.label}
+              <nav className="flex flex-col gap-4 mt-10">
+                <Link href="/pt-pt">
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Início</div>
+                </Link>
+
+                {/* Mobile Services */}
+                <div>
+                  <button 
+                    onClick={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
+                    className="text-lg font-medium hover:text-primary cursor-pointer flex items-center gap-2 w-full"
+                  >
+                    Serviços
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "services" ? "rotate-180" : ""}`} />
+                  </button>
+                  {openDropdown === "services" && (
+                    <div className="pl-4 mt-2 space-y-2">
+                      {serviceLinks.map((link) => (
+                        <Link key={link.href} href={link.href}>
+                          <div className="text-sm hover:text-primary cursor-pointer">{link.label}</div>
+                        </Link>
+                      ))}
                     </div>
-                  </Link>
-                ))}
+                  )}
+                </div>
+
+                {/* Mobile Service Areas */}
+                <div>
+                  <button 
+                    onClick={() => setOpenDropdown(openDropdown === "areas" ? null : "areas")}
+                    className="text-lg font-medium hover:text-primary cursor-pointer flex items-center gap-2 w-full"
+                  >
+                    Áreas de Serviço
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "areas" ? "rotate-180" : ""}`} />
+                  </button>
+                  {openDropdown === "areas" && (
+                    <div className="pl-4 mt-2 space-y-2 grid grid-cols-2 gap-2">
+                      {serviceAreas.map((area) => (
+                        <Link key={area.href} href={area.href}>
+                          <div className="text-sm hover:text-primary cursor-pointer">{area.label}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <Link href="/pt-pt/sobre">
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Sobre Nós</div>
+                </Link>
+
+                <Link href="/pt-pt/recursos">
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Recursos</div>
+                </Link>
+
+                <Link href="/pt-pt/faq">
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer">FAQ</div>
+                </Link>
+
+                <Link href="/pt-pt/contacto">
+                  <div className="text-lg font-medium hover:text-primary cursor-pointer">Contacto</div>
+                </Link>
+
                 <div className="pt-4 border-t border-slate-100">
                   <LanguageSwitcher currentLang="pt" />
                 </div>
@@ -117,28 +256,27 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
               <li><Link href="/pt-pt/servicos/ar-condicionado"><div className="hover:text-primary cursor-pointer">Ar Condicionado</div></Link></li>
               <li><Link href="/pt-pt/servicos/energia-solar"><div className="hover:text-primary cursor-pointer">Energia Solar</div></Link></li>
               <li><Link href="/pt-pt/servicos/bombas-calor"><div className="hover:text-primary cursor-pointer">Bombas de Calor</div></Link></li>
-              <li><Link href="/pt-pt/servicos/manutencao"><div className="hover:text-primary cursor-pointer">Manutenção</div></Link></li>
+              <li><Link href="/pt-pt/servicos/solucoes-integradas"><div className="hover:text-primary cursor-pointer">Soluções Integradas</div></Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 text-slate-900">Áreas de Serviço</h3>
+            <h3 className="font-bold mb-4 text-slate-900">Recursos</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li>Faro</li>
-              <li>Lagos</li>
-              <li>Albufeira</li>
-              <li>Vilamoura</li>
-              <li>Portimão</li>
-              <li>Tavira</li>
+              <li><Link href="/pt-pt/faq"><div className="hover:text-primary cursor-pointer">FAQ</div></Link></li>
+              <li><Link href="/pt-pt/depoimentos"><div className="hover:text-primary cursor-pointer">Depoimentos</div></Link></li>
+              <li><Link href="/pt-pt/recursos"><div className="hover:text-primary cursor-pointer">Guias & Recursos</div></Link></li>
+              <li><Link href="/pt-pt/carreiras"><div className="hover:text-primary cursor-pointer">Carreiras</div></Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4 text-slate-900">Contacto</h3>
             <ul className="space-y-2 text-sm text-slate-500">
-              <li>+351 910 675 168</li>
-              <li>Dan@algarveseasons.com</li>
+              <li><a href="tel:+351910675168" className="hover:text-primary cursor-pointer">+351 910 675 168</a></li>
+              <li><a href="mailto:Dan@algarveseasons.com" className="hover:text-primary cursor-pointer">Dan@algarveseasons.com</a></li>
               <li>Seg-Sáb: 9h - 18h</li>
+              <li><Link href="/pt-pt/privacidade"><div className="hover:text-primary cursor-pointer">Privacidade & Termos</div></Link></li>
             </ul>
           </div>
         </div>
@@ -146,6 +284,9 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
           © {new Date().getFullYear()} Algarve Seasons. Todos os direitos reservados.
         </div>
       </footer>
+
+      <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 }
