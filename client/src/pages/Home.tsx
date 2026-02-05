@@ -80,7 +80,7 @@ export default function Home() {
           <div className="relative h-[600px] hidden lg:block animate-in slide-in-from-right-8 duration-1000 fade-in delay-200">
             <div className="absolute inset-0 bg-secondary/10 rounded-[2rem] transform rotate-3 scale-95 z-0"></div>
             <img 
-              src="/images/hero-villa-solar.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Luxury Algarve Villa with Solar Panels" 
               fetchPriority="high"
               width="600"
@@ -119,7 +119,7 @@ export default function Home() {
             <Link href="/services/air-conditioning">
               <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 cursor-pointer">
                 <img 
-                  src="/images/service-ac-interior.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/FVFOhbsXygrFeufX.jpg" 
                   alt="Air Conditioning Installation Algarve" 
                   loading="lazy"
                   width="400"
@@ -144,7 +144,7 @@ export default function Home() {
             <Link href="/services/solar-energy">
               <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 md:-mt-12 cursor-pointer">
                 <img 
-                  src="/images/service-solar-roof.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/fLvjroHGfNHOrFCS.jpg" 
                   alt="Solar Panels Algarve" 
                   loading="lazy"
                   width="400"
@@ -169,7 +169,7 @@ export default function Home() {
             <Link href="/services/heat-pumps">
               <div className="group block relative h-[500px] overflow-hidden rounded-2xl shadow-lg transition-transform hover:-translate-y-2 cursor-pointer">
                 <img 
-                  src="/images/service-heatpump-garden.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/IXMFQlfEKkvnPYVG.jpg" 
                   alt="Heat Pump Installation Algarve" 
                   loading="lazy"
                   width="400"
@@ -203,7 +203,7 @@ export default function Home() {
           <div className="relative">
              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
              <img 
-              src="/images/trust-technician.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/mkDjgXGLJecKpWES.jpg" 
               alt="Algarve Seasons HVAC Technician" 
               className="rounded-2xl shadow-xl relative z-10"
              />

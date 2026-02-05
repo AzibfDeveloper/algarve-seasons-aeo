@@ -45,7 +45,7 @@ export default function About() {
           </div>
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <img 
-              src="/images/hero-villa-solar.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Algarve Seasons Team" 
               className="w-full h-full object-cover"
             />
