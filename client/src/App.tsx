@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Suspense, lazy } from "react";
@@ -67,7 +68,7 @@ const PageLoader = () => (
 );
 
 
-function Router() {
+function AppRouter() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
@@ -144,7 +145,9 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <Router hook={useHashLocation}>
+            <AppRouter />
+          </Router>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
