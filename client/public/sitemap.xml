@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ENGLISH PAGES -->
+  <!-- Homepage -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt" />
+  </url>
+
+  <!-- Main Service Pages -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/air-conditioning</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/ar-condicionado" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/solar-energy</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/energia-solar" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/heat-pumps</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/bombas-calor" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/tesla-powerwall</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/tesla-powerwall" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/maintenance</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/manutencao" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/services/all-in-one</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/tudo-em-um" />
+  </url>
+
+  <!-- Information Pages -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/about</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/sobre" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/service-areas</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/areas-servico" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/testimonials</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/depoimentos" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/faq</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/faq" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/resources</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/recursos" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/contact</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/contacto" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/careers</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/carreiras" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/privacy-terms</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/privacidade" />
+  </url>
+
+  <!-- PORTUGUESE PAGES -->
+  <!-- Homepage Portuguese -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/" />
+  </url>
+
+  <!-- Service Pages Portuguese -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/ar-condicionado</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/air-conditioning" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/energia-solar</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/solar-energy" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/bombas-calor</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/heat-pumps" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/tesla-powerwall</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/tesla-powerwall" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/manutencao</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/maintenance" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/servicos/tudo-em-um</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/services/all-in-one" />
+  </url>
+
+  <!-- Information Pages Portuguese -->
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/sobre</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/about" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/areas-servico</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/service-areas" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/depoimentos</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/testimonials" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/faq</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/faq" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/recursos</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/resources" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/contacto</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/contact" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/carreiras</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/careers" />
+  </url>
+
+  <url>
+    <loc>https://azibfdeveloper.github.io/AlgarveSeasons/#/pt-pt/privacidade</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azibfdeveloper.github.io/AlgarveSeasons/#/privacy-terms" />
+  </url>
+
+</urlset>
