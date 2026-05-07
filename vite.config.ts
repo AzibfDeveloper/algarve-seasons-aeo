@@ -167,6 +167,13 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        // Prevent inline eval in production
+        format: 'es',
+      },
+    },
   },
   server: {
     port: 3000,
