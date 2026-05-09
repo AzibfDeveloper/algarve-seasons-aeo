@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `files` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`fileName` varchar(255) NOT NULL,\n\t`fileKey` varchar(255) NOT NULL,\n\t`fileUrl` varchar(255) NOT NULL,\n\t`mimeType` varchar(100),\n\t`fileSize` bigint,\n\t`category` varchar(100) NOT NULL DEFAULT 'general',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `files_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `files_fileKey_unique` UNIQUE(`fileKey`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user p3wya4deaTKEkax.80cba43a7347 --database dB7SEyEK3rXBVUz4Mud6kP --execute CREATE TABLE `files` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`fileName` varchar(255) NOT NULL,\n\t`fileKey` varchar(255) NOT NULL,\n\t`fileUrl` varchar(255) NOT NULL,\n\t`mimeType` varchar(100),\n\t`fileSize` bigint,\n\t`category` varchar(100) NOT NULL DEFAULT 'general',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `files_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `files_fileKey_unique` UNIQUE(`fileKey`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 821
+}
