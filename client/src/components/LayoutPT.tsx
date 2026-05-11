@@ -63,7 +63,7 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/pt-pt">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/bNmTEHZSZfzWRGTo.png" alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
+              <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
             </div>
           </Link>
 
