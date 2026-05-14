@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { ScrollToTop } from "./ScrollToTop";
 import { WhatsAppButton } from "./WhatsAppButton";
+import logoImage from "../../../client/public/images/logo.png?url";
 
 export default function LayoutPT({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -63,7 +64,7 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/pt-pt">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/images/logo.png" alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
+              <img src={logoImage} alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
             </div>
           </Link>
 
