@@ -25,6 +25,8 @@ const Testimonials = lazy(() => import("@/pages/Testimonials"));
 const ResourcesGuides = lazy(() => import("@/pages/ResourcesGuides"));
 const Careers = lazy(() => import("@/pages/Careers"));
 const PrivacyTerms = lazy(() => import("@/pages/PrivacyTerms"));
+const QuoteRequest = lazy(() => import("@/pages/QuoteRequest"));
+const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
 
 // Portuguese Pages
 const HomePT = lazy(() => import("@/pages/pt/HomePT"));
@@ -88,6 +90,8 @@ function AppRouter() {
         <Route path="/resources" component={ResourcesGuides} />
         <Route path="/careers" component={Careers} />
         <Route path="/privacy-terms" component={PrivacyTerms} />
+        <Route path="/quote-request" component={QuoteRequest} />
+        <Route path="/admin" component={AdminDashboard} />
         
         {/* Portuguese Routes */}
         <Route path="/pt-pt" component={HomePT} />

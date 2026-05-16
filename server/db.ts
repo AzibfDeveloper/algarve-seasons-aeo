@@ -1,6 +1,6 @@
 import { eq, desc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, files, InsertFile } from "../drizzle/schema";
+import { InsertUser, users, files, InsertFile, quoteRequests, InsertQuoteRequest, QuoteRequest } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -177,5 +177,76 @@ export async function getFileCount(userId: number, category?: string) {
     .from(files)
     .where(whereClause);
   
+  return result.length;
+}
+
+/**
+ * Quote Request Management Queries
+ */
+
+export async function createQuoteRequest(quoteData: InsertQuoteRequest): Promise<QuoteRequest> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(quoteRequests).values(quoteData);
+  const insertedId = (result as any)[0]?.insertId;
+  
+  if (!insertedId) {
+    throw new Error("Failed to create quote request");
+  }
+
+  const quote = await db.select().from(quoteRequests).where(eq(quoteRequests.id, Number(insertedId))).limit(1);
+  return quote[0];
+}
+
+export async function getQuoteRequests(limit = 50, offset = 0, status?: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const whereClause = status ? eq(quoteRequests.status, status as any) : undefined;
+
+  const result = await db
+    .select()
+    .from(quoteRequests)
+    .where(whereClause)
+    .orderBy(desc(quoteRequests.createdAt))
+    .limit(limit)
+    .offset(offset);
+
+  return result;
+}
+
+export async function getQuoteRequestById(id: number): Promise<QuoteRequest | null> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.select().from(quoteRequests).where(eq(quoteRequests.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function updateQuoteRequest(id: number, updates: Partial<InsertQuoteRequest>) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.update(quoteRequests).set(updates).where(eq(quoteRequests.id, id));
+  return getQuoteRequestById(id);
+}
+
+export async function getQuoteRequestCount(status?: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const whereClause = status ? eq(quoteRequests.status, status as any) : undefined;
+  const result = await db.select().from(quoteRequests).where(whereClause);
   return result.length;
 }

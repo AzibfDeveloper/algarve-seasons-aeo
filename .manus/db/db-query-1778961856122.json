@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `quoteRequests` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`customerName` varchar(255) NOT NULL,\n\t`customerEmail` varchar(320) NOT NULL,\n\t`customerPhone` varchar(20) NOT NULL,\n\t`serviceType` enum('air-conditioning','solar','heat-pump','multiple') NOT NULL,\n\t`propertyType` enum('villa','apartment','house','commercial','other') NOT NULL,\n\t`propertySize` varchar(50),\n\t`location` varchar(255) NOT NULL,\n\t`description` text,\n\t`photoFileKey` varchar(255),\n\t`photoUrl` varchar(255),\n\t`status` enum('new','contacted','quoted','closed') NOT NULL DEFAULT 'new',\n\t`notes` text,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `quoteRequests_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user p3wya4deaTKEkax.80cba43a7347 --database dB7SEyEK3rXBVUz4Mud6kP --execute CREATE TABLE `quoteRequests` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`customerName` varchar(255) NOT NULL,\n\t`customerEmail` varchar(320) NOT NULL,\n\t`customerPhone` varchar(20) NOT NULL,\n\t`serviceType` enum('air-conditioning','solar','heat-pump','multiple') NOT NULL,\n\t`propertyType` enum('villa','apartment','house','commercial','other') NOT NULL,\n\t`propertySize` varchar(50),\n\t`location` varchar(255) NOT NULL,\n\t`description` text,\n\t`photoFileKey` varchar(255),\n\t`photoUrl` varchar(255),\n\t`status` enum('new','contacted','quoted','closed') NOT NULL DEFAULT 'new',\n\t`notes` text,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `quoteRequests_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 684
+}

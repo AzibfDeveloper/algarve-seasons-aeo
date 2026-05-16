@@ -59,3 +59,35 @@ export const filesRelations = relations(files, ({ one }) => ({
     references: [users.id],
   }),
 }));
+
+/**
+ * Quote requests table for customer quote submissions
+ * Stores customer information, service type, and photos
+ */
+export const quoteRequests = mysqlTable("quoteRequests", {
+  id: int("id").autoincrement().primaryKey(),
+  customerName: varchar("customerName", { length: 255 }).notNull(),
+  customerEmail: varchar("customerEmail", { length: 320 }).notNull(),
+  customerPhone: varchar("customerPhone", { length: 20 }).notNull(),
+  serviceType: mysqlEnum("serviceType", ["air-conditioning", "solar", "heat-pump", "multiple"]).notNull(),
+  propertyType: mysqlEnum("propertyType", ["villa", "apartment", "house", "commercial", "other"]).notNull(),
+  propertySize: varchar("propertySize", { length: 50 }),
+  location: varchar("location", { length: 255 }).notNull(),
+  description: text("description"),
+  photoFileKey: varchar("photoFileKey", { length: 255 }),
+  photoUrl: varchar("photoUrl", { length: 255 }),
+  status: mysqlEnum("status", ["new", "contacted", "quoted", "closed"]).default("new").notNull(),
+  notes: text("notes"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type QuoteRequest = typeof quoteRequests.$inferSelect;
+export type InsertQuoteRequest = typeof quoteRequests.$inferInsert;
+
+/**
+ * Relations for quote requests
+ */
+export const quoteRequestsRelations = relations(quoteRequests, ({ one }) => ({
+  // Add relations if needed in the future
+}));
