@@ -1,9 +1,11 @@
 import QuoteRequestForm from "@/components/QuoteRequestForm";
+import Layout from "@/components/Layout";
 
 export default function QuoteRequest() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4">
+        <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote</h1>
           <p className="text-lg text-gray-600">
@@ -32,5 +34,6 @@ export default function QuoteRequest() {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }

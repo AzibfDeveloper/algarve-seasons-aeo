@@ -170,7 +170,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
 
-            <Link href="/contact">
+            <Link href="/quote-request">
               <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md ml-2">
                 Get Free Quote
               </Button>
@@ -279,7 +279,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <LanguageSwitcher currentLang="en" />
                 </div>
 
-                <Link href="/contact">
+                <Link href="/quote-request">
                   <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
                     Get Free Quote
                   </Button>

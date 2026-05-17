@@ -144,9 +144,11 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
 
-            <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md ml-4">
-              Pedir Orçamento
-            </Button>
+            <Link href="/quote-request">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-md shadow-md ml-4">
+                Pedir Orçamento
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Nav */}
@@ -225,9 +227,11 @@ export default function LayoutPT({ children }: { children: React.ReactNode }) {
                 <div className="pt-4 border-t border-slate-100">
                   <LanguageSwitcher currentLang="pt" />
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
-                  Pedir Orçamento
-                </Button>
+                <Link href="/quote-request">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
+                    Pedir Orçamento
+                  </Button>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
