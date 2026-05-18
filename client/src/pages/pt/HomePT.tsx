@@ -71,8 +71,11 @@ export default function HomePT() {
           <div className="relative h-[600px] hidden lg:block">
             <div className="absolute inset-0 bg-slate-200 rounded-[2rem] transform rotate-3 scale-95 z-0"></div>
             <img 
-              src="/images/hero-villa-solar.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Moradia Moderna no Algarve com Painéis Solares" 
+              fetchPriority="high"
+              width="600"
+              height="600"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
             />
             
@@ -108,7 +111,7 @@ export default function HomePT() {
               <Card className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-slate-100 overflow-hidden h-full">
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors z-10"></div>
-                  <img src="/images/service-ac-interior.jpg" alt="Ar Condicionado" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/FVFOhbsXygrFeufX.jpg" alt="Ar Condicionado" loading="lazy" width="400" height="300" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -130,7 +133,7 @@ export default function HomePT() {
               <Card className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-slate-100 overflow-hidden h-full">
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors z-10"></div>
-                  <img src="/images/service-solar-roof.jpg" alt="Energia Solar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/rQYKPjfFVXBkKzXJ.jpg" alt="Energia Solar" loading="lazy" width="400" height="300" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -152,7 +155,7 @@ export default function HomePT() {
               <Card className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-slate-100 overflow-hidden h-full">
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors z-10"></div>
-                  <img src="/images/service-heat-pump.jpg" alt="Bombas de Calor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/mkDjgXGLJecKpWES.jpg" alt="Bombas de Calor" loading="lazy" width="400" height="300" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -181,8 +184,11 @@ export default function HomePT() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
             <img 
-              src="/images/trust-technician.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/mkDjgXGLJecKpWES.jpg" 
               alt="Técnico Algarve Seasons" 
+              loading="lazy"
+              width="500"
+              height="600"
               className="rounded-2xl shadow-xl relative z-10"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100 z-20 max-w-xs">
