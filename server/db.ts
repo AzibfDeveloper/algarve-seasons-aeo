@@ -1,6 +1,6 @@
 import { eq, desc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, files, InsertFile, quoteRequests, InsertQuoteRequest, QuoteRequest } from "../drizzle/schema";
+import { InsertUser, users, files, InsertFile, quoteRequests, InsertQuoteRequest, QuoteRequest, emailLogs, InsertEmailLog, EmailLog } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -249,4 +249,70 @@ export async function getQuoteRequestCount(status?: string) {
   const whereClause = status ? eq(quoteRequests.status, status as any) : undefined;
   const result = await db.select().from(quoteRequests).where(whereClause);
   return result.length;
+}
+
+/**
+ * Email Log Management Queries
+ */
+
+export async function createEmailLog(emailData: InsertEmailLog): Promise<EmailLog> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(emailLogs).values(emailData);
+  const insertedId = (result as any)[0]?.insertId;
+  
+  if (!insertedId) {
+    throw new Error("Failed to create email log");
+  }
+
+  const log = await db.select().from(emailLogs).where(eq(emailLogs.id, Number(insertedId))).limit(1);
+  return log[0];
+}
+
+export async function updateEmailLog(id: number, updates: Partial<InsertEmailLog>) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.update(emailLogs).set(updates).where(eq(emailLogs.id, id));
+  const result = await db.select().from(emailLogs).where(eq(emailLogs.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getEmailLogsByQuoteId(quoteRequestId: number, limit = 50, offset = 0) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db
+    .select()
+    .from(emailLogs)
+    .where(eq(emailLogs.quoteRequestId, quoteRequestId))
+    .orderBy(desc(emailLogs.createdAt))
+    .limit(limit)
+    .offset(offset);
+
+  return result;
+}
+
+export async function getEmailLogsByStatus(status: string, limit = 50, offset = 0) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db
+    .select()
+    .from(emailLogs)
+    .where(eq(emailLogs.status, status as any))
+    .orderBy(desc(emailLogs.createdAt))
+    .limit(limit)
+    .offset(offset);
+
+  return result;
 }

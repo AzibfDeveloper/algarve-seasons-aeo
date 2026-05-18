@@ -91,3 +91,32 @@ export type InsertQuoteRequest = typeof quoteRequests.$inferInsert;
 export const quoteRequestsRelations = relations(quoteRequests, ({ one }) => ({
   // Add relations if needed in the future
 }));
+
+/**
+ * Email logs table for tracking email notifications
+ * Stores records of all customer and admin emails sent
+ */
+export const emailLogs = mysqlTable("emailLogs", {
+  id: int("id").autoincrement().primaryKey(),
+  quoteRequestId: int("quoteRequestId"),
+  recipientEmail: varchar("recipientEmail", { length: 320 }).notNull(),
+  emailType: mysqlEnum("emailType", ["customer-confirmation", "admin-notification", "quote-response"]).notNull(),
+  subject: varchar("subject", { length: 255 }).notNull(),
+  status: mysqlEnum("status", ["sent", "failed", "pending"]).default("pending").notNull(),
+  errorMessage: text("errorMessage"),
+  sentAt: timestamp("sentAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type EmailLog = typeof emailLogs.$inferSelect;
+export type InsertEmailLog = typeof emailLogs.$inferInsert;
+
+/**
+ * Relations for email logs
+ */
+export const emailLogsRelations = relations(emailLogs, ({ one }) => ({
+  quoteRequest: one(quoteRequests, {
+    fields: [emailLogs.quoteRequestId],
+    references: [quoteRequests.id],
+  }),
+}));

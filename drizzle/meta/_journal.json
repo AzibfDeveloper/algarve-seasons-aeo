@@ -15,6 +15,13 @@
       "when": 1778961847169,
       "tag": "0001_amusing_tyger_tiger",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1779031667494,
+      "tag": "0002_medical_warbird",
+      "breakpoints": true
     }
   ]
 }

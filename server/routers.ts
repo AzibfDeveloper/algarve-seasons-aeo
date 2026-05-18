@@ -4,9 +4,11 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { TRPCError } from "@trpc/server";
-import { createFile, getUserFiles, getFileById, deleteFile, getFileCount, createQuoteRequest, getQuoteRequests, getQuoteRequestById, updateQuoteRequest, getQuoteRequestCount } from "./db";
+import { createFile, getUserFiles, getFileById, deleteFile, getFileCount, createQuoteRequest, getQuoteRequests, getQuoteRequestById, updateQuoteRequest, getQuoteRequestCount, createEmailLog, updateEmailLog } from "./db";
 import { storagePut, storageGetSignedUrl } from "./storage";
 import { notifyOwner } from "./_core/notification";
+import { sendEmail, generateCustomerConfirmationEmail, generateAdminNotificationEmail } from "./_core/emailService";
+import { ENV } from "./_core/env";
 
 export const appRouter = router({
   system: systemRouter,
@@ -152,7 +154,65 @@ export const appRouter = router({
             status: "new",
           });
 
-          // Notify owner of new quote request
+          // Send customer confirmation email
+          const customerEmailHtml = generateCustomerConfirmationEmail(
+            input.customerName,
+            input.serviceType,
+            quote.id.toString()
+          );
+          const customerEmailSent = await sendEmail({
+            to: input.customerEmail,
+            subject: "Quote Request Received - Algarve Seasons",
+            html: customerEmailHtml,
+            replyTo: "info@algarveseasons.com",
+          });
+
+          // Log customer confirmation email
+          await createEmailLog({
+            quoteRequestId: quote.id,
+            recipientEmail: input.customerEmail,
+            emailType: "customer-confirmation",
+            subject: "Quote Request Received - Algarve Seasons",
+            status: customerEmailSent ? "sent" : "failed",
+            sentAt: customerEmailSent ? new Date() : undefined,
+            errorMessage: customerEmailSent ? undefined : "Failed to send email",
+          });
+
+          // Send admin notification email with property photos
+          const adminEmailHtml = generateAdminNotificationEmail(
+            input.customerName,
+            input.customerEmail,
+            input.customerPhone,
+            input.serviceType,
+            input.propertyType,
+            input.propertySize || "Not specified",
+            input.location,
+            input.description || "",
+            input.photoUrl ? [input.photoUrl] : [],
+            quote.id.toString()
+          );
+          
+          // Get owner email from environment or use default
+          const ownerEmail = process.env.OWNER_EMAIL || "admin@algarveseasons.com";
+          const adminEmailSent = await sendEmail({
+            to: ownerEmail,
+            subject: `New Quote Request from ${input.customerName} - ${input.serviceType}`,
+            html: adminEmailHtml,
+            replyTo: input.customerEmail,
+          });
+
+          // Log admin notification email
+          await createEmailLog({
+            quoteRequestId: quote.id,
+            recipientEmail: ownerEmail,
+            emailType: "admin-notification",
+            subject: `New Quote Request from ${input.customerName} - ${input.serviceType}`,
+            status: adminEmailSent ? "sent" : "failed",
+            sentAt: adminEmailSent ? new Date() : undefined,
+            errorMessage: adminEmailSent ? undefined : "Failed to send email",
+          });
+
+          // Notify owner in-app as well
           await notifyOwner({
             title: "New Quote Request",
             content: `New quote request from ${input.customerName} (${input.customerEmail}) for ${input.serviceType} in ${input.location}`,
