@@ -62,7 +62,7 @@ export default function SolarEnergy() {
                   Solar Panel Installation & Energy Systems in the <span className="text-yellow-500">Algarve</span>
                 </h1>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Algarve Seasons designs and installs residential and commercial solar photovoltaic (PV) systems across the Algarve, helping homeowners and businesses reduce energy bills and achieve energy independence. With up to €7,500 government support and the Algarve's exceptional sun exposure, solar payback periods are 5–8 years. We serve all 16 Algarve municipalities.
+                  Algarve Seasons designs and installs residential and commercial solar photovoltaic (PV) systems across the Algarve, helping homeowners and businesses reduce energy bills and achieve energy independence. Algarve Seasons advices on government support and the Algarve's exceptional sun exposure, solar payback periods are 5–8 years. We serve all 16 Algarve municipalities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-6 text-lg">
