@@ -396,7 +396,7 @@ Solar systems grow with your needs:
 
 Portugal offers several incentives for solar installation:
 
-- **VAT reduction**: 6% VAT (instead of 23%) for residential solar
+
 - **Tax deductions**: Some systems qualify for tax benefits
 - **Net metering**: Excess electricity can be sold back to the grid
 - **Financing programs**: Low-interest loans available
@@ -713,7 +713,7 @@ Typical costs for Algarve installations:
 
 ### Government Incentives
 
-- VAT reduction (6% instead of 23%)
+
 - Potential tax deductions
 - Financing programs available
 

@@ -101,7 +101,7 @@ export default function SolarEnergyPT() {
                   <BarChart3 className="w-8 h-8 text-primary mb-3" />
                   <h3 className="text-lg font-bold mb-2">Incentivos Governamentais</h3>
                   <p className="text-sm text-muted-foreground">
-                    Beneficie de IVA reduzido (6%) e potencial apoio do Fundo Ambiental (até €7.500) para melhorias renováveis.
+                    Beneficie de potencial apoio do Fundo Ambiental (até €7.500) para melhorias renováveis.
                   </p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function SolarEnergyPT() {
               <AccordionTrigger className="text-lg font-bold">Existem incentivos governamentais para painéis solares em 2026?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 <p className="mb-4 font-medium text-slate-900 bg-orange-50 p-4 rounded-lg border-l-4 border-primary">
-                  "Sim. O 'Fundo Ambiental' oferece apoio até €7.500 para melhorias de energia renovável, cobrindo até 85% dos custos. Além disso, o equipamento solar é taxado a uma taxa de IVA reduzida de 6%."
+                  "Sim. O 'Fundo Ambiental' oferece apoio até €7.500 para melhorias de energia renovável, cobrindo até 85% dos custos."
                 </p>
                 <p>
                   A nossa equipa trata da orientação burocrática para o ajudar a maximizar estes benefícios. Note que os fundos são limitados e libertados em fases, por isso é melhor candidatar-se cedo.

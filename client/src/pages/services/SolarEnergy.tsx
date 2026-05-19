@@ -16,7 +16,7 @@ export default function SolarEnergy() {
     },
     {
       question: "What is the solar panel payback period in the Algarve?",
-      answer: "Solar panel payback periods in the Algarve typically range from 5–8 years, thanks to high sun exposure, government incentives (up to €7,500 reimbursement and 6% VAT), and rising electricity costs. After payback, panels generate free electricity for 15–20+ additional years."
+      answer: "Solar panel payback periods in the Algarve typically range from 5–8 years, thanks to high sun exposure, government incentives (up to €7,500 reimbursement), and rising electricity costs. After payback, panels generate free electricity for 15–20+ additional years."
     },
     {
       question: "Do I need a south-facing roof for solar panels?",
@@ -62,7 +62,7 @@ export default function SolarEnergy() {
                   Solar Panel Installation & Energy Systems in the <span className="text-yellow-500">Algarve</span>
                 </h1>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Algarve Seasons designs and installs residential and commercial solar photovoltaic (PV) systems across the Algarve, helping homeowners and businesses reduce energy bills and achieve energy independence. With Portugal's 6% VAT on solar equipment, up to €7,500 government support, and the Algarve's exceptional sun exposure, solar payback periods are 5–8 years. We serve all 16 Algarve municipalities.
+                  Algarve Seasons designs and installs residential and commercial solar photovoltaic (PV) systems across the Algarve, helping homeowners and businesses reduce energy bills and achieve energy independence. With up to €7,500 government support and the Algarve's exceptional sun exposure, solar payback periods are 5–8 years. We serve all 16 Algarve municipalities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-6 text-lg">
@@ -95,7 +95,7 @@ export default function SolarEnergy() {
               <div className="bg-green-50 p-8 rounded-xl">
                 <Leaf className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Government Support</h3>
-                <p className="text-gray-700">6% VAT (vs. 23% standard), up to €7,500 reimbursement (85% of costs for equipment up to €3,000 with battery storage).</p>
+                <p className="text-gray-700">Up to €7,500 reimbursement (85% of costs for equipment up to €3,000 with battery storage).</p>
               </div>
               <div className="bg-indigo-50 p-8 rounded-xl">
                 <Zap className="w-12 h-12 text-indigo-600 mb-4" />
@@ -299,10 +299,7 @@ export default function SolarEnergy() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Government Incentives for Solar Energy in Portugal (2026)</h2>
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg border-l-4 border-green-500">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">6% VAT on Renewable Equipment</h3>
-                <p className="text-gray-700">Extended beyond Jan 2026, likely permanent. Significant savings compared to standard 23% VAT.</p>
-              </div>
+
               <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Energy Efficiency Home Support Program</h3>
                 <p className="text-gray-700">Up to €7,500 reimbursement, 85% of costs. €1,000 for solar-only or €3,000 for solar+battery. Regional bonus (+10% outside Lisbon/Porto = benefits Algarve).</p>
