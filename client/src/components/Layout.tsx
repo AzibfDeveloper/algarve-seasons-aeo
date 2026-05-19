@@ -65,7 +65,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src={logoImage} alt="Algarve Seasons Logo" className="h-16 w-auto object-contain" />
+              <img src={logoImage} alt="Algarve Seasons Logo" loading="eager" className="h-16 w-auto object-contain" />
             </div>
           </Link>
 
@@ -304,7 +304,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container grid md:grid-cols-5 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-display font-bold text-xl">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/bNmTEHZSZfzWRGTo.png" alt="Algarve Seasons Logo" className="h-12 w-auto object-contain" />
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/bNmTEHZSZfzWRGTo.png" alt="Algarve Seasons Logo" loading="lazy" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-sm text-slate-500">
               The Algarve's All-In-One HVAC Solution Provider. Premium Daikin, Tesla, and Huawei partners.

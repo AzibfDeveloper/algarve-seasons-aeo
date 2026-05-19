@@ -131,8 +131,11 @@ export default function CarreirasPT() {
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
             <img 
-              src="/images/hero-villa-solar.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Equipa Algarve Seasons" 
+              loading="lazy"
+              width="500"
+              height="400"
               className="w-full h-full object-cover"
             />
           </div>

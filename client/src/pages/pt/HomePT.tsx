@@ -74,6 +74,7 @@ export default function HomePT() {
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Moradia Moderna no Algarve com Painéis Solares" 
               fetchPriority="high"
+              loading="eager"
               width="600"
               height="600"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"

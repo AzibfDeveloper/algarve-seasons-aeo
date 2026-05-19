@@ -88,6 +88,7 @@ export default function Home() {
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Luxury Algarve Villa with Solar Panels" 
               fetchPriority="high"
+              loading="eager"
               width="600"
               height="600"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
@@ -210,6 +211,9 @@ export default function Home() {
              <img 
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/mkDjgXGLJecKpWES.jpg" 
               alt="Algarve Seasons HVAC Technician" 
+              loading="lazy"
+              width="500"
+              height="600"
               className="rounded-2xl shadow-xl relative z-10"
              />
              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100 z-20 max-w-xs">

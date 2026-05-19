@@ -46,8 +46,11 @@ export default function AirConditioningPT() {
           <div className="relative h-[500px] hidden lg:block">
             <div className="absolute inset-0 bg-secondary/10 rounded-[2rem] transform -rotate-3 scale-95 z-0"></div>
             <img 
-              src="/images/service-ac-interior.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/FVFOhbsXygrFeufX.jpg" 
               alt="Instalação de Ar Condicionado Daikin em Moradia no Algarve" 
+              loading="lazy"
+              width="500"
+              height="500"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
             />
             

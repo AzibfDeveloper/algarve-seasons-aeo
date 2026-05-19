@@ -282,7 +282,7 @@ export default function QuoteRequestForm() {
             ) : (
               <div className="space-y-3">
                 <div className="relative w-full h-48 bg-gray-100 rounded-lg overflow-hidden">
-                  <img src={previewUrl} alt="Preview" className="w-full h-full object-cover" />
+                  <img src={previewUrl} alt="Preview" loading="lazy" className="w-full h-full object-cover" />
                   <button
                     type="button"
                     onClick={handleRemoveFile}

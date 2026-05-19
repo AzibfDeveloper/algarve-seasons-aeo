@@ -47,6 +47,9 @@ export default function About() {
             <img 
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/JJmVLcipiVdZRrll.jpg" 
               alt="Algarve Seasons Team" 
+              loading="lazy"
+              width="500"
+              height="500"
               className="w-full h-full object-cover"
             />
           </div>

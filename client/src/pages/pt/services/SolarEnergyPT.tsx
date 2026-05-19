@@ -46,8 +46,11 @@ export default function SolarEnergyPT() {
           <div className="relative h-[500px] hidden lg:block">
             <div className="absolute inset-0 bg-primary/10 rounded-[2rem] transform rotate-3 scale-95 z-0"></div>
             <img 
-              src="/images/service-solar-roof.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/rQYKPjfFVXBkKzXJ.jpg" 
               alt="Painéis Solares em Telhado de Moradia no Algarve" 
+              loading="lazy"
+              width="500"
+              height="500"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
             />
             

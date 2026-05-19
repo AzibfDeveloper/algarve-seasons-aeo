@@ -79,7 +79,7 @@ export default function Reviews() {
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <img src="/google-logo.svg" alt="Google" className="w-5 h-5" onError={(e) => e.currentTarget.style.display = 'none'} />
+              <img src="/google-logo.svg" alt="Google" loading="lazy" className="w-5 h-5" onError={(e) => e.currentTarget.style.display = 'none'} />
               Read More Reviews on Google
             </a>
           </Button>

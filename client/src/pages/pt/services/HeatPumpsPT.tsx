@@ -45,8 +45,11 @@ export default function HeatPumpsPT() {
           <div className="relative h-[500px] hidden lg:block">
             <div className="absolute inset-0 bg-accent/10 rounded-[2rem] transform rotate-3 scale-95 z-0"></div>
             <img 
-              src="/images/service-heatpump-garden.jpg" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663308749066/IXMFQlfEKkvnPYVG.jpg" 
               alt="Unidade Exterior de Bomba de Calor Daikin Altherma" 
+              loading="lazy"
+              width="500"
+              height="500"
               className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10"
             />
             
